@@ -1,0 +1,28 @@
+<!-- toobin (other artwork) -->
+
+<mamelayout version="2">
+	<element name="too">
+		<image file="toobin.png" alphafile="mask_vertical.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="608" y="70" width="705" height="940" />
+		</screen>
+		<bezel element="too">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="662" y="2" width="598" height="1078" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

@@ -1,0 +1,24 @@
+<!-- othunder.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="operation_thunderbolt_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="860" y="470" width="2280" height="1710" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="2822" />
+		</bezel>
+	</view>
+</mamelayout>
+
+<!--
+
+- Artwork type: Bezel
+- Scanned bezel provided by Mr. Do
+- Vectorized by zorg; color corrected by Ad_Enuff
+- Lay file by Mr. Do
+
+-->

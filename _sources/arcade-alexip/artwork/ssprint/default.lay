@@ -1,0 +1,63 @@
+<!-- default.lay -->
+
+<mamelayout version="2">
+	<element name="wbezel">
+		<image file="sprin169.png" />
+	</element>
+	<element name="wwbezel">
+		<image file="sprin1610.png" />
+	</element>
+	<element name="ssp">
+		<image file="ssprint.png" alphafile="mask_horizontal.png" />
+	</element>
+	<view name="Widescreen 16:10 Artwork">
+		<bezel element="wwbezel">
+			<bounds left="0" top="0" right="2560" bottom="1600" />
+		</bezel>
+		<screen index="0">
+			<bounds left="461.37" top="359.53" right="2098.62" bottom="1587.47" />
+		</screen>
+	</view>
+	<view name="Widescreen 16:9 Artwork">
+		<bezel element="wbezel">
+			<bounds left="0" top="0" right="2833" bottom="1600" />
+		</bezel>
+		<screen index="0">
+			<bounds left="597.87" top="359.53" right="2235.12" bottom="1587.47" />
+		</screen>
+	</view>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="348" y="81" width="1224" height="918" />
+		</screen>
+		<bezel element="ssp">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="400" y="100" width="1120" height="880" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="454" y="155" width="1030" height="758" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

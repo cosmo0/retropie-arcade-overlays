@@ -1,0 +1,63 @@
+<!-- dkong.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="donkey_kong_bezel.png" />
+	</element>
+	<element name="inst">
+		<image file="dkong_inst_bezel.png" />
+	</element>
+	<element name="cocktail">
+		<image file="dkong_inst_cocktail.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="995" y="570" width="2010" height="2680" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3802" />
+		</bezel>
+		<backdrop element="inst">
+			<bounds x="0" y="3852" width="1952" height="400" />
+		</backdrop>
+	</view>
+	<view name="Cocktail_Inst">
+		<screen index="0">
+			<bounds x="0" y="0" width="3000" height="4000" />
+		</screen>
+		<bezel element="cocktail">
+			<bounds x="3100" y="1000" width="1234" height="2000" />
+		</bezel>
+		<bezel element="cocktail">
+			<bounds x="-1334" y="1000" width="1234" height="2000" />
+			<orientation rotate="180" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="32" width="907" height="1016" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="591" y="54" width="758" height="989" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

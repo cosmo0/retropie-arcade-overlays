@@ -1,0 +1,39 @@
+<!--Galaga88.lay -->	   
+	   
+<mamelayout version="2">
+	<element name="nmva_widescreen">
+		<image file="galaga88_nmva_ws.png" alphafile="mask_1280_720_vertical.png" />
+	</element>
+	<element name="nmva_fullscreen" defstate="1">
+		<image file="galaga88_nmva_fs.png" alphafile="mask_1280_960_vertical.png" />
+	</element>
+	<view name="NMVA_Widescreen">
+		<bezel element="nmva_widescreen">
+			<bounds x="0" y="0" width="1280" height="720" />
+		</bezel>
+		<screen index="0">
+			<bounds x="385" y="20" width="510" height="680" />
+		</screen> 
+	</view>
+	<view name="NMVA_Fullscreen">
+		<bezel element="nmva_fullscreen">
+			<bounds x="0" y="0" width="1280" height="960" />
+		</bezel>
+		<screen index="0">
+			<bounds x="310" y="40" width="660" height="880" />
+		</screen> 
+
+</view><element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="590" y="100" width="789" height="887" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

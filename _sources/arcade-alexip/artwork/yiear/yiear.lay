@@ -1,0 +1,42 @@
+<!-- yiear.lay -->
+
+<mamelayout version="2">
+	<element name="inst">
+		<image file="yiear_inst_1.png" />
+	</element>
+	<element name="inst2">
+		<image file="yiear_inst_2.png" />
+	</element>
+	<element name="inst3">
+		<image file="yiear_inst_3.png" />
+	</element>
+	<view name="Inst_Card">
+		<bounds x="-596" y="0" width="5182" height="3685" />
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="inst">
+			<bounds x="0" y="3106" width="2006" height="579" />
+		</bezel>
+		<bezel element="inst2">
+			<bounds x="2646" y="3050" width="1354" height="635" />
+		</bezel>
+		<bezel element="inst3">
+			<bounds x="4100" y="1087" width="496" height="826" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="388" y="89" width="1142" height="899" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+>
+
+	</view>
+</mamelayout>
+

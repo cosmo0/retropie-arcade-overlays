@@ -1,0 +1,29 @@
+<!-- pacmania.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="pacmania.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="1081" y="605" width="1950" height="2600" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3821" />
+		</bezel>
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="594" y="52" width="755" height="1013" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

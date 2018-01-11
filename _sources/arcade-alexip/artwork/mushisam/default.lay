@@ -1,0 +1,27 @@
+<!-- futaribl.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="11" width="907" height="1056" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="bezel">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork 2">
+		<screen index="0">
+			<bounds x="506" y="32" width="907" height="1016" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>

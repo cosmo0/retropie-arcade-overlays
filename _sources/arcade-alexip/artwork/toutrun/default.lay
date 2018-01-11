@@ -1,0 +1,41 @@
+<!-- default.lay -->
+
+<mamelayout version="2">
+		<element name="wwbezel">
+			<image file="toutrun1610.png" />
+		</element>
+		<view name="Widescreen 16:10 Artwork">
+			<bezel element="wwbezel">
+				<bounds left="0" top="0" right="2560" bottom="1600" />
+			</bezel>
+			<screen index="0">
+				<bounds left="398.5" top="226" right="2162.5" bottom="1549" />
+			</screen>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="388" y="89" width="1142" height="907" />		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="362" y="92" width="1201" height="901" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+		</view>
+</mamelayout>
+

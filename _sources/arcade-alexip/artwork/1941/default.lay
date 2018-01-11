@@ -1,0 +1,72 @@
+<!-- 1941.lay -->
+
+<mamelayout version="2">
+
+
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="622" y="50" width="708" height="980" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="519" y="11" width="890" height="1056" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="bezelK">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork 2">
+		<screen index="0">
+			<bounds x="549" y="78" width="820" height="923" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="inst_1">
+		<image file="1941_inst_1.png" />
+	</element>
+	<element name="inst_2">
+		<image file="1941_inst_2.png" />
+	</element>
+	<element name="inst_3">
+		<image file="1941_inst_3.png" />
+	</element>
+	<view name="Inst_Card">
+		<screen index="0">
+			<bounds x="0" y="0" width="3000" height="4000" />
+		</screen>
+		<bezel element="inst_1">
+			<bounds x="-1410" y="1000" width="1360" height="2000" />
+		</bezel>
+		<bezel element="inst_2">
+			<bounds x="3050" y="1000" width="1360" height="2000" />
+		</bezel>
+		<backdrop element="inst_3">
+			<bounds x="0" y="4050" width="3000" height="588" />
+		</backdrop>	
+	</view>	
+</mamelayout>
+
+<!--
+
+- Artwork type: Inst. Card
+- Scanned instruction card provided by tormod
+- Converted for MAME by Mr. Do
+- Lay file by Mr. Do
+
+-->

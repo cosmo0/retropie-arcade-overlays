@@ -1,0 +1,131 @@
+<!-- chasehq.lay -->
+
+<mamelayout version="2">
+	<element name="bezelK">
+		<image file="Bezel - chasehq.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="377" y="78" width="1160" height="923" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="marquee">
+		<image file="chasehq_marquee.png" />
+	</element>
+	<element name="redlamp">
+		<image file="redlamp.png"  state="1" />
+	</element>
+	<element name="bluelamp">
+		<image file="bluelamp.png"  state="1" />
+	</element>
+	<element name="bezel">
+		<image file="chasehq_bezel.png" />
+	</element>
+	<element name="shifter" defstate="0">
+		<rect>
+			<bounds left="0" right="32" top="0" bottom="64" />
+			<color red="0.8" green="0.0" blue="0.0" />
+		</rect>
+		<rect>
+			<bounds left="2" right="30" top="2" bottom="62" />
+			<color red="0.0" green="0.0" blue="0.0" />
+		</rect>
+		<rect>
+			<bounds left="14" right="18" top="15" bottom="49" />
+			<color red="0.5" green="0.5" blue="0.5" />
+		</rect>
+		<disk>
+			<bounds left="14" right="18" top="13" bottom="17" />
+			<color red="0.5" green="0.5" blue="0.5" />
+		</disk>
+		<disk>
+			<bounds left="14" right="18" top="47" bottom="51" />
+			<color red="0.5" green="0.5" blue="0.5" />
+		</disk>
+		<text string="LOW" state="1">
+			<bounds left="3" right="29" top="2" bottom="12" />
+			<color red="1.0" green="1.0" blue="0.0" />
+		</text>
+		<text string="LOW" state="0">
+			<bounds left="3" right="29" top="2" bottom="12" />
+			<color red="1.0" green="1.0" blue="1.0" />
+		</text>
+
+		<text string="HIGH" state="1">
+			<bounds left="3" right="29" top="52" bottom="62" />
+			<color red="1.0" green="1.0" blue="1.0" />
+		</text>
+		<text string="HIGH" state="0">
+			<bounds left="3" right="29" top="52" bottom="62" />
+			<color red="1.0" green="1.0" blue="0.0" />
+		</text>
+		<disk state="1">
+			<bounds left="9" right="23" top="14" bottom="28" />
+			<color red="0.8" green="0.0" blue="0.0" />
+		</disk>
+		<disk state="0">
+			<bounds left="9" right="23" top="36" bottom="50" />
+			<color red="0.8" green="0.0" blue="0.0" />
+		</disk>
+	</element>
+	<view name="Upright_Artwork">
+		<bounds x="-420" y="0" width="4840" height="4529" />
+		<screen index="0">
+			<bounds x="577" y="1799" width="2840" height="2130" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="1269" width="4000" height="3260" />
+		</bezel>
+		<bezel element="marquee">
+			<bounds x="0" y="0" width="4000" height="1219" />
+		</bezel>
+		<bezel name="lamp1" element="redlamp">
+			<bounds x="3104" y="0" width="896" height="1219" />
+		</bezel>
+		<bezel name="lamp0" element="bluelamp">
+			<bounds x="0" y="0" width="896" height="1219" />
+		</bezel>
+		<bezel element="shifter" inputtag="IN1" inputmask="0x10">
+			<bounds x="4100" y="3839" width="320" height="640" />
+		</bezel>
+	</view>
+	<view name="Bezel_Only">
+		<screen index="0">
+			<bounds x="577" y="530" width="2840" height="2130" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3260" />
+		</bezel>
+	</view>
+	<view name="Marquee_Only">
+		<screen index="0">
+			<bounds x="0" y="1269" width="4000" height="3000" />
+		</screen>
+		<bezel element="marquee">
+			<bounds x="0" y="0" width="4000" height="1219" />
+		</bezel>
+		<bezel name="lamp1" element="redlamp">
+			<bounds x="3104" y="0" width="896" height="1219" />
+		</bezel>
+		<bezel name="lamp0" element="bluelamp">
+			<bounds x="0" y="0" width="896" height="1219" />
+		</bezel>
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="352" y="56" width="1216" height="963" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>	
+</mamelayout>
+

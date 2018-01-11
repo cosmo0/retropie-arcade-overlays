@@ -1,0 +1,40 @@
+<!-- apb.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="apb_bezel.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="1025" y="700" width="1950" height="2600" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="4000" />
+		</bezel>
+
+</view><element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="512" y="4" width="890" height="1076" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="bezelB">
+		<image file="art2.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="580" y="38" width="762" height="1015" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

@@ -1,0 +1,42 @@
+<!-- xmen.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="249" y="20" width="1420" height="1022" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="bezelB">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="209" y="20" width="1500" height="1049" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="bezelC">
+		<image file="art3.png" />
+	</element>
+	<view name="Artwork3">
+		<screen index="0">
+			<bounds x="305" y="37" width="1310" height="1006" />
+		</screen>
+		<bezel element="bezelC">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+	</view>
+</mamelayout>

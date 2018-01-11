@@ -1,0 +1,25 @@
+<!-- .lay -->	   
+	   
+<mamelayout version="2">
+
+<element name="art">
+<image file="cab.png"/>
+</element>
+
+
+
+<view name="Artwork">
+
+<bezel element="art">
+<bounds x="0" y="0" width="1920" height="1080" />
+</bezel>
+
+<screen index="0">
+<bounds x="361" y="94" width="1203" height="894" />
+</screen> 
+
+</view>
+
+
+
+</mamelayout>

@@ -1,0 +1,77 @@
+<!-- aburner2.lay -->
+
+<mamelayout version="2">	
+		<element name="wbezel" >
+			<image file="aburn169.png" />
+		</element>
+		<element name="wwbezel" >
+			<image file="aburn1610.png" />
+		</element>
+		<element name="cockpit_light_l_w" defstate="0" >
+			<image file="lockl.png" state="1" />
+		</element>	
+		<element name="cockpit_light_r_w" defstate="0" >
+			<image file="lockr.png" state="1" />
+		</element>
+		<element name="cockpit_light_m_w" defstate="0" >
+			<image file="lockm.png" state="1" />
+		</element>
+		<view name="Widescreen 16:10 Artwork">
+			<screen index="0">
+				<bounds left="414.33" top="150.75" right="2145.66" bottom="1449.25" />
+			</screen>
+			<bezel element="wwbezel">
+				<bounds left="0" top="0" right="2560" bottom="1600" />
+			</bezel>		
+			<bezel name="lamp1" element="cockpit_light_l_w">
+				<bounds x="0" y="942" width="473" height="283" />
+			</bezel>		
+			<bezel name="lamp1" element="cockpit_light_r_w">
+				<bounds x="2087" y="942" width="473" height="283" />
+			</bezel>
+			<bezel name="lamp2" element="cockpit_light_l_w">
+				<bounds x="0" y="942" width="473" height="283" />
+			</bezel>		
+			<bezel name="lamp2" element="cockpit_light_r_w">
+				<bounds x="2087" y="942" width="473" height="283" />
+			</bezel>
+			<bezel name="lamp0" element="cockpit_light_m_w">
+				<bounds x="1107.5" y="0" width="345" height="127" />
+			</bezel>
+		</view>
+		<view name="Widescreen 16:9 Artwork">
+			<screen index="0">
+				<bounds left="476.5" top="95" right="2356.5" bottom="1505" />
+			</screen>
+			<bezel element="wbezel">
+				<bounds left="0" top="0" right="2833" bottom="1600" />
+			</bezel>		
+			<bezel name="lamp1" element="cockpit_light_l_w">
+				<bounds x="0" y="942" width="473" height="283" />
+			</bezel>		
+			<bezel name="lamp1" element="cockpit_light_r_w">
+				<bounds x="2360" y="942" width="473" height="283" />
+			</bezel>
+			<bezel name="lamp2" element="cockpit_light_l_w">
+				<bounds x="0" y="942" width="473" height="283" />
+			</bezel>		
+			<bezel name="lamp2" element="cockpit_light_r_w">
+				<bounds x="2360" y="942" width="473" height="283" />
+			</bezel>
+			<bezel name="lamp0" element="cockpit_light_m_w">
+				<bounds x="1244" y="0" width="345" height="127" />
+			</bezel>
+
+</view><element name="bezelB">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="362" y="89" width="1209" height="904" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+		</view>
+</mamelayout>

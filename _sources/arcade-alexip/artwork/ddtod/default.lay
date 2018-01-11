@@ -1,0 +1,82 @@
+<!-- ddtod.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="322" y="37" width="1277" height="1006" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="bezelA1">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork 2">
+		<screen index="0">
+			<bounds x="397" y="57" width="1770" height="1326" />
+		</screen>
+		<bezel element="bezelA1">
+			<bounds x="0" y="0" width="2560" height="1440" />
+		</bezel>
+	</view>
+	<element name="inst">
+		<image file="ddtod_inst_1.png" />
+	</element>
+	<element name="inst2">
+		<image file="ddtod_inst_2.png" />
+	</element>
+	<element name="inst3">
+		<image file="ddtod_inst_3.png" />
+	</element>
+	<element name="instj">
+		<image file="ddtod_inst_1_jpn.png" />
+	</element>
+	<element name="inst2j">
+		<image file="ddtod_inst_2_jpn.png" />
+	</element>
+	<element name="inst3j">
+		<image file="ddtod_inst_3_jpn.png" />
+	</element>
+	<view name="Inst_Card_US">
+		<screen index="0">
+			<bounds x="0" y="0" width="2800" height="2100" />
+		</screen>
+		<bezel element="inst">
+			<bounds x="-650" y="615.5" width="600" height="869" />
+		</bezel>
+		<bezel element="inst2">
+			<bounds x="2850" y="615.5" width="600" height="869" />
+		</bezel>
+		<bezel element="inst3">
+			<bounds x="400" y="2142.5" width="2000" height="420" />
+		</bezel>
+	</view>
+	<view name="Inst_Card_JPN">
+		<screen index="0">
+			<bounds x="0" y="0" width="2800" height="2100" />
+		</screen>
+		<bezel element="instj">
+			<bounds x="-650" y="615.5" width="600" height="869" />
+		</bezel>
+		<bezel element="inst2j">
+			<bounds x="2850" y="615.5" width="600" height="869" />
+		</bezel>
+		<bezel element="inst3j">
+			<bounds x="400" y="2142.5" width="2000" height="420" />
+		</bezel>
+	</view>
+</mamelayout>
+
+<!--
+
+- Artwork type: Inst. Card
+- Scanned instruction card provided by tormod (English Cards 1 and 2)
+- Scanned Inst. Card provided by CPS2Shock (The Rest)
+- Converted for MAME by Mr. Do
+- Lay file by Mr. Do
+
+-->

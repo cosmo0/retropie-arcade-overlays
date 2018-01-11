@@ -1,0 +1,41 @@
+<!-- xevious.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="xevious_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="1035" y="832" width="1920" height="2560" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="3991" height="4000" />
+		</bezel>
+
+</view><element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="532" y="56" width="848" height="968" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="585" y="49" width="761" height="1007" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

@@ -1,0 +1,29 @@
+<!-- mario.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="mario_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="800" y="596" width="2400" height="1800" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="351" y="66" width="1235" height="938" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

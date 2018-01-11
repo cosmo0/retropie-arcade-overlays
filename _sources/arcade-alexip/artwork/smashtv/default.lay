@@ -1,0 +1,57 @@
+<!-- smashtv (other artwork) -->
+
+<mamelayout version="2">
+	<element name="stv">
+		<image file="smashtv.png" alphafile="mask_horizontal.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="348" y="81" width="1224" height="918" />
+		</screen>
+		<bezel element="stv">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="315" y="64" width="1280" height="930" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="art2">
+<image file="art2.png"/>
+</element>
+
+<view name="Artwork3">
+
+<bezel element="art2">
+<bounds x="0" y="0" width="4000" height="3000" />
+</bezel>
+
+<screen index="0">
+<bounds x="350" y="285" width="3300" height="2320" />
+</screen> 
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="388" y="63" width="1167" height="963" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+	</view>
+</mamelayout>
+

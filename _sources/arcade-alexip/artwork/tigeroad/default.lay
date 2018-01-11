@@ -1,0 +1,37 @@
+<!-- tigeroad.lay -->
+
+<mamelayout version="2">
+	<element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="322" y="45" width="1277" height="982" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+</view><element name="Artwork2">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="400" y="100" width="1120" height="880" />
+		</screen>
+		<bezel element="Artwork2">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="art3">
+<image file="art3.png"/>
+</element> <view name="Artwork3"> <screen index="0">
+<bounds x="589" y="521" width="2830" height="1850" />
+</screen> <bezel element="art3">
+<bounds x="0" y="0" width="4000" height="3000" />
+</bezel>
+
+	</view>
+</mamelayout>

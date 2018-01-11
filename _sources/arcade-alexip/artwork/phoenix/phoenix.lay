@@ -1,0 +1,30 @@
+<!-- phoenix.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="phoenix_cocktail.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="1460" y="575" width="1080" height="1440" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="2588" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="506" y="32" width="907" height="1016" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+	</view>
+</mamelayout>
+

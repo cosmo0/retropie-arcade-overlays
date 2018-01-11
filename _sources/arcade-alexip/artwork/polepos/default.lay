@@ -1,0 +1,80 @@
+<!-- Pole Position NMVA.lay -->	   
+	   
+<mamelayout version="2">
+	<element name="nmva_widescreen">
+		<image file="pole_nmva_ws.png" alphafile="mask_1280_720_horiz.png" />
+	</element>
+	<element name="nmva_fullscreen" defstate="1">
+		<image file="pole_nmva_fs.png" alphafile="mask_1280_960_horiz.png" />
+	</element>
+	<element name="wbezel">
+		<image file="pole169.png" />
+	</element>
+	<element name="wwbezel">
+		<image file="pole1610.png" />
+	</element>
+	<element name="wwsbezel">
+		<image file="polesh1610.png" />
+	</element>
+	<element name="wwshifter" defstate="0">
+		<image file="shiftlow.png" state="0"/>
+		<image file="shifthigh.png" state="1"/>
+	</element>
+	<view name="NMVA_Widescreen">
+		<bezel element="nmva_widescreen">
+			<bounds x="0" y="0" width="1280" height="720" />
+		</bezel>
+		<screen index="0">
+			<bounds x="232" y="54" width="816" height="612" />
+		</screen> 
+	</view>
+	<view name="NMVA_Fullscreen">
+		<bezel element="nmva_fullscreen">
+			<bounds x="0" y="0" width="1280" height="960" />
+		</bezel>
+		<screen index="0">
+			<bounds x="132" y="99" width="1016" height="762" />
+		</screen> 
+	</view>
+	<view name="Widescreen 16:10 Shifter Artwork">
+		<bezel element="wwsbezel">
+			<bounds left="0" top="0" right="2560" bottom="1600" />
+		</bezel>
+		<screen index="0">
+			<bounds left="415.64" top="151.72" right="2144.35" bottom="1448.26" />
+		</screen>
+		<bezel element="wwshifter" inputtag="IN0L" inputmask="0x02">
+			<bounds x="2171" y="1081" width="270" height="514" />
+		</bezel>
+	</view>
+	<view name="Widescreen 16:10 Artwork">
+		<bezel element="wwbezel">
+			<bounds left="0" top="0" right="2560" bottom="1600" />
+		</bezel>
+		<screen index="0">
+			<bounds left="387.2" top="77.89" right="2172.79" bottom="1417.09" />
+		</screen>
+	</view>
+	<view name="Widescreen 16:9 Artwork">
+		<bezel element="wbezel">
+			<bounds left="0" top="0" right="2833" bottom="1600" />
+		</bezel>
+		<screen index="0">
+			<bounds left="524.34" top="77" right="2308.66" bottom="1416" />
+		</screen>
+
+</view><element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="365" y="106" width="1190" height="876" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

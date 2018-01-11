@@ -1,0 +1,20 @@
+<!-- VR.lay -->
+
+<mamelayout version="2">
+
+
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="362" y="92" width="1204" height="898" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

@@ -1,0 +1,80 @@
+<!-- robotron.lay -->
+
+<mamelayout version="2">
+	<element name="bezel_cabaret">
+		<image file="robotron_bezel_cabaret.png" />
+	</element>
+	<element name="bezel_uk">
+		<image file="robotron_bezel_uk.png" />
+	</element>
+	<element name="bezel_us">
+		<image file="robotron_bezel_us.png" />
+	</element>
+	<element name="cocktail">
+		<image file="robotron_inst_cocktail.png" />
+	</element>
+	<view name="Upright_Artwork_US">
+		<bounds x="0" y="70" width="4000" height="3000" />
+		<screen index="0">
+			<bounds x="712" y="671" width="2600" height="1950" />
+		</screen>
+		<bezel element="bezel_us">
+			<bounds x="0" y="0" width="4000" height="3623" />
+		</bezel>
+	</view>
+	<view name="Upright_Artwork_UK">
+		<bounds x="0" y="0" width="4000" height="3300" />
+		<screen index="0">
+			<bounds x="520" y="422" width="2960" height="2220" />
+		</screen>
+		<bezel element="bezel_uk">
+			<bounds x="0" y="0" width="4000" height="3703" />
+		</bezel>
+	</view>
+	<view name="Cabaret_Artwork">
+		<screen index="0">
+			<bounds x="588" y="1210" width="2840" height="2130" />
+		</screen>
+		<bezel element="bezel_cabaret">
+			<bounds x="0" y="0" width="4000" height="3780" />
+		</bezel>
+	</view>
+	<view name="Cocktail_Inst">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="cocktail">
+			<bounds x="4100" y="500" width="1215" height="2000" />
+		</bezel>
+		<bezel element="cocktail">
+			<bounds x="-1315" y="500" width="1215" height="2000" />
+			<orientation rotate="180" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="400" y="100" width="1120" height="880" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="391" y="58" width="1167" height="972" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

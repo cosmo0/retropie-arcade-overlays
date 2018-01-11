@@ -1,0 +1,42 @@
+<!-- shdancer.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="shadow_dancer_bezel.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="642" y="986" width="2720" height="2040" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="4000" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="322" y="37" width="1277" height="1006" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="371" y="92" width="1201" height="904" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

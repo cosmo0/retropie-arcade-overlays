@@ -1,0 +1,27 @@
+<!-- knights.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA1">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="397" y="57" width="1770" height="1326" />
+		</screen>
+		<bezel element="bezelA1">
+			<bounds x="0" y="0" width="2560" height="1440" />
+		</bezel>
+	</view>
+	<element name="inst_1">
+		<image file="knights_inst.png" />
+	</element>
+	<view name="Inst_Card">
+		<screen index="0">
+			<bounds x="0" y="0" width="3200" height="2400" />
+		</screen>
+		<bezel element="inst_1">
+			<bounds x="400" y="2450" width="2400" height="467" />
+		</bezel>
+	</view>	
+</mamelayout>
+

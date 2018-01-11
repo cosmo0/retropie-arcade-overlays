@@ -1,0 +1,77 @@
+<!-- ghouls.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="ghouls_bezel.png" />
+	</element>
+	<element name="inst">
+		<image file="daimakaimura_inst_1.png" />
+	</element>
+	<element name="inst2">
+		<image file="daimakaimura_inst_2.png" />
+	</element>
+	<element name="inst3">
+		<image file="daimakaimura_inst_3.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="684" y="1008" width="2680" height="2010" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3975" />
+		</bezel>
+	</view>
+	<view name="Inst_Card_JPN">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="inst">
+			<bounds x="-1121" y="500" width="1071" height="2000" />
+		</bezel>
+		<bezel element="inst2">
+			<bounds x="4050" y="500" width="1071" height="2000" />
+		</bezel>
+		<bezel element="inst3">
+			<bounds x="0" y="3050" width="4000" height="830" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="322" y="37" width="1277" height="1006" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="bezelB">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork3">
+		<screen index="0">
+			<bounds x="249" y="2" width="1420" height="1070" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="360" y="89" width="1212" height="910" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

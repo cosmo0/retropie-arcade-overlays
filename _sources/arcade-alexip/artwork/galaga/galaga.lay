@@ -1,0 +1,54 @@
+<!-- galaga.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="galaga_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="970" y="736" width="2040" height="2720" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3713" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="32" width="907" height="1016" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+
+</view><element name="bezelB">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="544" y="67" width="827" height="940" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="580" y="52" width="763" height="982" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

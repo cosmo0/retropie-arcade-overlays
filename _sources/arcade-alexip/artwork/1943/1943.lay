@@ -1,0 +1,62 @@
+<!-- 1943.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="32" width="907" height="1016" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="bezelB">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="532" y="68" width="848" height="948" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="bezelC">
+		<image file="art3.png" />
+	</element>
+	<view name="Artwork3">
+		<screen index="0">
+			<bounds x="556" y="12" width="809" height="1056" />
+		</screen>
+		<bezel element="bezelC">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="bezel">
+		<image file="1943.png" />
+	</element>
+	<view name="Artwork4">
+		<screen index="0">
+			<bounds x="1017" y="663" width="1950" height="2600" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3969" />
+		</bezel>
+
+</view><element name="cab">
+		<image file="art4.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="577" y="49" width="762" height="989" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>

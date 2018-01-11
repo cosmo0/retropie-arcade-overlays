@@ -1,0 +1,38 @@
+<!-- forgottn.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="322" y="37" width="1277" height="1006" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="bezelA1">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork 2">
+		<screen index="0">
+			<bounds x="397" y="57" width="1770" height="1326" />
+		</screen>
+		<bezel element="bezelA1">
+			<bounds x="0" y="0" width="2560" height="1440" />
+		</bezel>
+
+</view><element name="bezelB">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="368" y="110" width="1204" height="868" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>

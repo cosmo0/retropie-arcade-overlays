@@ -1,0 +1,27 @@
+<!-- asterix.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="322" y="37" width="1277" height="1006" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="inst_1">
+		<image file="asterix_inst.png" />
+	</element>
+	<view name="Inst_Card">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="inst_1">
+			<bounds x="500" y="3050" width="3000" height="807" />
+		</bezel>
+	</view>
+</mamelayout>
+

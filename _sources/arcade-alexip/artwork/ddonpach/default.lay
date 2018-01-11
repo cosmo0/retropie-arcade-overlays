@@ -1,0 +1,33 @@
+<!-- ddonpach.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="28" width="898" height="1021" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="inst_1">
+		<image file="ddonpach_inst_1.png" />
+	</element>
+	<element name="inst_3">
+		<image file="ddonpach_inst_3.png" />
+	</element>
+	<view name="Inst_Card">
+		<screen index="0">
+			<bounds x="0" y="0" width="3000" height="4000" />
+		</screen>
+		<bezel element="inst_1">
+			<bounds x="-1069" y="1000" width="969" height="2000" />
+		</bezel>
+		<bezel element="inst_3">
+			<bounds x="3100" y="1000" width="969" height="2000" />
+		</bezel>
+	</view>	
+</mamelayout>
+

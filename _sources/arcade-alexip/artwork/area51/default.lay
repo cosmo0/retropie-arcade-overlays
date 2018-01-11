@@ -1,0 +1,27 @@
+<!-- area51.lay -->
+
+<mamelayout version="2">
+	<element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="377" y="78" width="1160" height="923" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="inst">
+		<image file="area51_inst.png" />
+	</element>
+	<view name="Inst_Card">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="inst">
+			<bounds x="0" y="3050" width="4000" height="561" />
+		</bezel>
+	</view>
+</mamelayout>
+

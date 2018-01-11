@@ -1,0 +1,38 @@
+<!-- default.lay -->
+
+<mamelayout version="2">
+		<element name="wbezel">
+			<image file="jedi169.png" />
+		</element>
+		<element name="wwbezel">
+			<image file="jedi1610.png" />
+		</element>
+		<view name="Widescreen 16:10 Artwork">
+			<bezel element="wwbezel">
+				<bounds left="0" top="0" right="2560" bottom="1600" />
+			</bezel>
+			<screen index="0">
+				<bounds left="388.48" top="131.36" right="2171.52" bottom="1468.64" />
+			</screen>
+		</view>
+		<view name="Widescreen 16:9 Artwork">
+			<bezel element="wbezel">
+				<bounds left="0" top="0" right="2833" bottom="1600" />
+			</bezel>
+			<screen index="0">
+				<bounds left="350.5" top="1" right="2482.5" bottom="1600" />
+			</screen>
+</view><element name="inst">
+		<image file="rotj_instructions.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="inst">
+			<bounds x="500" y="3050" width="3000" height="983" />
+		</bezel>
+
+		</view>
+</mamelayout>
+

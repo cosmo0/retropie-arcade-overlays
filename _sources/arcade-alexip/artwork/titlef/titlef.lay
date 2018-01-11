@@ -1,0 +1,27 @@
+<!-- titlef.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="360" y="89" width="1212" height="913" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="bezelB">
+		<image file="cab2.png" />
+	</element>
+	<view name="Small Cabinet">
+		<screen index="0">
+			<bounds x="514" y="201" width="904" height="686" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+</mamelayout>

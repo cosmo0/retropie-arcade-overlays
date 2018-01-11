@@ -1,0 +1,42 @@
+<!-- opwolf.lay -->
+
+<mamelayout version="2">
+
+<element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="293" y="38" width="1371" height="1002" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel> 
+
+</view><element name="bezel">
+		<image file="operation_wolf_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="490" y="353" width="3000" height="2250" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3682" />
+		</bezel>
+
+</view><element name="bezelB">
+		<image file="art2.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="600" y="275" width="716" height="529" />
+		</screen>
+		<bezel element="bezelB">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+  </view>
+
+</mamelayout>

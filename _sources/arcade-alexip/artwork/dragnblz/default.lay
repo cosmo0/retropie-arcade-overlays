@@ -1,0 +1,58 @@
+<!-- dragnblz.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="11" width="907" height="1056" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="inst_card_us">
+		<image file="dragnblz_inst.png" />
+	</element>
+	<element name="inst_card_jpn_1">
+		<image file="drgnblz_inst_1.png" />
+	</element>
+	<element name="inst_card_jpn_2">
+		<image file="drgnblz_inst_2.png" />
+	</element>
+	<view name="Inst_Card_US">
+		<screen index="0">
+			<bounds x="0" y="0" width="2100" height="2800" />
+		</screen>
+		<bezel element="inst_card_us">
+			<bounds x="50" y="2850" width="2000" height="500" />
+		</bezel>		
+	</view>
+	<view name="Inst_Card_JPN">
+		<bounds x="-523" y="0" width="3446" height="3200" />
+		<screen index="0">
+			<bounds x="0" y="0" width="2400" height="3200" />
+		</screen>
+		<backdrop element="inst_card_jpn_2">
+			<bounds x="50" y="3250" width="2300" height="510" />
+		</backdrop>
+		<bezel element="inst_card_jpn_1">
+			<bounds x="2450" y="600" width="473" height="2000" />
+		</bezel>
+
+</view><element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="580" y="53" width="758" height="1009" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>	
+</mamelayout>
+

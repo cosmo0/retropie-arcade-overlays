@@ -1,0 +1,46 @@
+<!-- starwars.lay -->
+
+<mamelayout version="2">
+
+
+
+<element name="bezel">
+<image file="starwars_bezel.png" />
+</element>
+
+
+
+<view name="Upright_Artwork">
+<screen index="0">
+<bounds x="905" y="2124" width="2200" height="1650" />
+</screen>
+<bezel element="bezel">
+<bounds x="0" y="0" width="4000" height="6013" />
+</bezel>
+</view>
+
+<view name="Upright_Artwork_Cropped">
+<bounds x="0" y="1153" width="4000" height="3089" />
+<screen index="0">
+<bounds x="905" y="2124" width="2200" height="1650" />
+</screen>
+<bezel element="bezel">
+<bounds x="0" y="0" width="4000" height="6013" />
+</bezel>
+
+</view><element name="Cabinet">
+		<image file="art.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="322" y="62" width="1287" height="966" />
+		</screen>
+		<bezel element="Cabinet">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view>
+
+</mamelayout>
+

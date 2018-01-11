@@ -1,0 +1,28 @@
+<!-- ikari3.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="ikari3_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="679" y="1057" width="2640" height="1980" />
+		</screen>  
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="3994" height="4000" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="400" y="100" width="1120" height="880" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

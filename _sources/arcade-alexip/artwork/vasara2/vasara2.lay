@@ -1,0 +1,29 @@
+<!-- vasara2.lay -->
+
+<mamelayout version="2">
+	<element name="inst_1">
+		<image file="vasara2_inst.png" />
+	</element>
+	<view name="Inst_Card">
+		<screen index="0">
+			<bounds x="0" y="0" width="3000" height="4000" />
+		</screen>
+		<bezel element="inst_1">
+			<bounds x="-500" y="4050" width="4000" height="791" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="32" width="907" height="1016" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>	
+</mamelayout>
+

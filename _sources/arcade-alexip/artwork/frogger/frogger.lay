@@ -1,0 +1,77 @@
+<!-- frogger.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="frogger_bezel.png" />
+	</element>
+	<element name="cocktail">
+		<image file="frogger_cocktail_sega.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<bounds x="0" y="1108" width="3540" height="2792" />
+		<screen index="0">
+			<bounds x="949" y="1587" width="1680" height="2240" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="3540" height="4000" />
+		</bezel>
+	</view>
+	<view name="Cocktail_Inst">
+		<screen index="0">
+			<bounds x="0" y="0" width="3000" height="4000" />
+		</screen>
+		<bezel element="cocktail">
+			<bounds x="3200" y="500" width="1874" height="3000" />
+		</bezel>
+		<bezel element="cocktail">
+			<bounds x="-2074" y="500" width="1874" height="3000" />
+			<orientation rotate="180" />
+		</bezel>
+	</view>
+	<view name="Full_Bezel">
+		<bounds x="0" y="0" width="3540" height="3900" />
+		<screen index="0">
+			<bounds x="949" y="1587" width="1680" height="2240" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="3540" height="4000" />
+		</bezel>
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="32" width="907" height="1016" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="bezelK">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="532" y="62" width="838" height="948" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="588" y="58" width="761" height="989" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+	</view>
+</mamelayout>
+

@@ -1,0 +1,66 @@
+<!-- shinobi.lay -->
+
+<mamelayout version="2">
+	<element name="inst_card">
+		<image file="shinobi_inst.png" />
+	</element>
+	<element name="bezel">
+		<image file="shinobi_bezel.png" />
+	</element>
+	<element name="inst1">
+		<image file="shinobi_bez_inst_1.png" />
+	</element>
+	<element name="inst2">
+		<image file="shinobi_bez_inst_2.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<bounds x="0" y="200" width="4000" height="3700" />
+		<screen index="0">
+			<bounds x="681" y="1011" width="2640" height="1980" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3989" />
+		</bezel>
+		<bezel element="inst1">
+			<bounds x="950" y="3100" width="850" height="424" />
+		</bezel>
+		<bezel element="inst2">
+			<bounds x="2200" y="3100" width="850" height="424" />
+		</bezel>		
+	</view>
+	<view name="Inst_Card">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="inst_card">
+			<bounds x="0" y="3050" width="4000" height="707" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="388" y="89" width="1142" height="899" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="362" y="92" width="1201" height="898" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+		
+	</view>
+</mamelayout>
+

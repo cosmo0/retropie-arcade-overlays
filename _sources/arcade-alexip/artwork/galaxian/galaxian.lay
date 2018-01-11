@@ -1,0 +1,53 @@
+<!-- galaxian.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="galaxian_bezel.png" />
+	</element>
+	<element name="bezel2">
+		<image file="galaxian_bezel_bertolino.png" />
+	</element>
+	<view name="Upright_Artwork_Midway">
+		<screen index="0">
+			<bounds x="973" y="714" width="2070" height="2760" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3653" />
+		</bezel>
+	</view>
+	<view name="Upright_Artwork_Namco">
+		<screen index="0">
+			<bounds x="816" y="535" width="1590" height="2120" />
+		</screen>
+		<bezel element="bezel2">
+			<bounds x="0" y="0" width="3221" height="4000" />
+		</bezel>
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="506" y="32" width="907" height="1016" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="582" y="55" width="761" height="982" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+	</view>
+</mamelayout>
+

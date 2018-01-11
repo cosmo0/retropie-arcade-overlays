@@ -1,0 +1,31 @@
+<!-- gaplus.lay -->
+
+<mamelayout version="2">
+	<element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="544" y="67" width="827" height="940" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="inst_1">
+		<image file="gaplus_inst.png" />
+	</element>
+	<view name="Cocktail_Inst">
+		<screen index="0">
+			<bounds x="0" y="0" width="3000" height="4000" />
+		</screen>
+		<bezel element="inst_1">
+			<bounds x="-1630" y="700" width="1580" height="2600" />
+			<orientation rotate="180" />
+		</bezel>
+		<bezel element="inst_1">
+			<bounds x="3050" y="700" width="1580" height="2600" />
+		</bezel>
+	</view>	
+</mamelayout>
+

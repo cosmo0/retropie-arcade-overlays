@@ -1,0 +1,62 @@
+<!-- mspacman.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="mspacman_bezel.png" />
+	</element>
+	<element name="bezel_mspacman_ck">
+		<image file="mspacman_cocktail.png" />
+	</element>
+	<element name="cabaret">
+		<image file="mspac_cabaret.png" />
+	</element>
+	<element name="gray">
+		<rect>
+			<color red="0.5" green="0.5" blue="0.5" />
+		</rect>
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="1020" y="800" width="1950" height="2600" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3662" />
+		</bezel>
+	</view>
+	<view name="Cabaret_Artwork">
+		<screen index="0">
+			<bounds x="950" y="242" width="2100" height="2800" />
+		</screen>
+		<bezel element="cabaret">
+			<bounds x="0" y="0" width="4000" height="3281" />
+		</bezel>
+	</view>
+	<view name="Cocktail_Artwork">
+		<screen index="0">
+			<bounds x="614" y="1000" width="1500" height="2000" />
+		</screen>
+		<backdrop element="gray">
+			<bounds x="0" y="0" width="2750" height="600" />
+		</backdrop>
+		<backdrop element="gray">
+			<bounds x="0" y="3400" width="2750" height="600" />
+		</backdrop>
+		<bezel element="bezel_mspacman_ck">
+			<bounds x="0" y="0" width="2750" height="4000" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="588" y="60" width="755" height="988" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

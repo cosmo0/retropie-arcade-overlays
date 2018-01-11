@@ -1,0 +1,109 @@
+<!-- defender.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="defender_bezel.png" />
+	</element>
+	<element name="inst_us">
+		<image file="defender_inst_us.png" />
+	</element>
+	<element name="inst_uk">
+		<image file="defender_inst_uk.png" />
+	</element>
+	<element name="inst_ck">
+		<image file="defender_inst_cocktail.png" />
+	</element>
+	<view name="Upright_Artwork_US">
+		<bounds x="0" y="0" width="4000" height="2900" />
+		<screen index="0">
+			<bounds x="823" y="508" width="2400" height="1800" />
+		</screen>
+		<bezel element="inst_us">
+			<bounds x="3418" y="735" width="434" height="731" />
+		</bezel>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3057" />
+		</bezel>
+	</view>
+	<view name="Upright_Artwork_UK">
+		<bounds x="0" y="0" width="4000" height="2900" />
+		<screen index="0">
+			<bounds x="823" y="508" width="2400" height="1800" />
+		</screen>
+		<bezel element="inst_uk">
+			<bounds x="3418" y="735" width="434" height="731" />
+		</bezel>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3057" />
+		</bezel>
+	</view>
+	<view name="Cocktail_Inst">
+		<screen index="0">
+			<bounds x="0" y="0" width="3600" height="2700" />
+		</screen>
+		<bezel element="inst_ck">
+			<bounds x="3700" y="750" width="713" height="1200" />
+		</bezel>
+		<bezel element="inst_ck">
+			<bounds x="-813" y="750" width="713" height="1200" />
+			<orientation rotate="180" />
+		</bezel>
+
+</view><element name="art">
+<image file="art.png"/>
+</element>
+
+<view name="Artwork">
+
+<bezel element="art">
+<bounds x="0" y="0" width="4000" height="3000" />
+</bezel>
+
+<screen index="0">
+<bounds x="520" y="285" width="2970" height="2410" />
+</screen> 
+
+</view><element name="art2">
+<image file="art2.png"/>
+</element>
+
+<view name="Artwork2">
+
+<bezel element="art2">
+<bounds x="0" y="0" width="4000" height="3000" />
+</bezel>
+
+<screen index="0">
+<bounds x="520" y="285" width="2970" height="2410" />
+</screen> 
+
+</view><element name="art3">
+<image file="art3.png"/>
+</element>
+
+<view name="Artwork3">
+
+<bezel element="art3">
+<bounds x="0" y="0" width="4000" height="3000" />
+</bezel>
+
+<screen index="0">
+<bounds x="520" y="285" width="2970" height="2410" />
+</screen> 
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="377" y="63" width="1175" height="969" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

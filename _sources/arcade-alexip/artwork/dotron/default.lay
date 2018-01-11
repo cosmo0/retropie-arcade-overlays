@@ -1,0 +1,98 @@
+<!-- dotron.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA1">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="874" y="85" width="2092" height="1989" />
+		</screen>
+		<bezel element="bezelA1">
+			<bounds x="0" y="0" width="3840" height="2160" />
+		</bezel>
+	</view>
+	<element name="backdrop" defstate="1">
+		<image file="dotron_backdrop.png" alphafile="dotmask.png" state="1" />
+	</element>
+	<element name="backdrop2">
+		<image file="dotron_backdrop.png" />
+	</element>
+	<element name="mask">
+		<image file="dotmask1.png" />
+	</element>
+	<element name="outer">
+		<image file="dot_outer_bezel.png" />
+	</element>
+	<element name="inner">
+		<image file="dot_inner_bezel.png" />
+	</element>
+	<element name="frame">
+		<image file="dot_inner_frame.png" />
+	</element>	
+	<view name="Upright_Artwork">
+		<bounds x="0" y="0" width="4000" height="2950" />
+		<screen index="0">
+			<bounds x="890" y="591" width="2196" height="1647" />
+		</screen>  
+		<backdrop name="backlight" element="backdrop">
+			<bounds x="513" y="97" width="2916" height="2186" />
+		</backdrop>
+		<bezel element="frame">
+			<bounds x="828" y="479" width="2320" height="1875" />
+			<color alpha="0.5" />
+		</bezel>
+		<bezel element="inner">
+			<bounds x="300" y="0" width="3400" height="2568" />
+		</bezel>
+		<bezel element="outer">
+			<bounds x="0" y="0" width="4000" height="3016" />
+		</bezel>
+	</view>
+	<view name="Upright_Artwork_NoMask">
+		<bounds x="0" y="0" width="4000" height="2950" />
+		<screen index="0">
+			<bounds x="890" y="591" width="2196" height="1647" />
+		</screen>  
+		<backdrop element="backdrop2">
+			<bounds x="513" y="97" width="2916" height="2186" />
+		</backdrop>
+		<bezel element="frame">
+			<bounds x="828" y="479" width="2320" height="1875" />
+			<color alpha="0.8" />
+		</bezel>
+		<bezel element="inner">
+			<bounds x="300" y="0" width="3400" height="2568" />
+		</bezel>
+		<bezel element="outer">
+			<bounds x="0" y="0" width="4000" height="3016" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="400" y="100" width="1120" height="880" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="325" y="63" width="1290" height="966" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+	</view>
+</mamelayout>
+

@@ -1,0 +1,40 @@
+<!-- outrun.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="outrun_map.png" />
+	</element>
+	<element name="bezel2">
+		<image file="outrun_cabaret.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="3050" width="4000" height="872" />
+		</bezel>
+	</view>
+	<view name="Cabaret_Artwork">
+		<screen index="0">
+			<bounds x="515" y="760" width="2960" height="2220" />
+		</screen>
+		<bezel element="bezel2">
+			<bounds x="0" y="0" width="4000" height="3703" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="365" y="81" width="1201" height="912" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

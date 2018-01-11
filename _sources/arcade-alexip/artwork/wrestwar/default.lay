@@ -1,0 +1,28 @@
+<!-- wrestwar.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="wrestle_war_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="1008" y="386" width="1980" height="2640" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3649" />
+		</bezel>
+
+</view><element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="576" y="26" width="766" height="1024" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

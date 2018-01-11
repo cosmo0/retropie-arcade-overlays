@@ -1,0 +1,44 @@
+<!-- nam1975.lay -->
+
+<mamelayout version="2">
+		
+<element name="art">
+<image file="art.png"/>
+</element>
+
+<view name="Artwork">
+
+<bezel element="art">
+<bounds x="0" y="0" width="4000" height="3000" />
+</bezel>
+
+<screen index="0">
+<bounds x="520" y="285" width="2970" height="2410" />
+</screen> 
+
+</view><element name="Artwork2">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="298" y="68" width="1327" height="944" />
+		</screen>
+		<bezel element="Artwork2">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="Cabinet">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="362" y="103" width="1202" height="884" />
+		</screen>
+		<bezel element="Cabinet">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+</mamelayout>
+

@@ -1,0 +1,42 @@
+<!-- joust2.lay -->
+
+<mamelayout version="2">
+	<element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="539" y="78" width="838" height="923" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="bezel">
+		<image file="joust2_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<bounds x="0" y="150" width="4000" height="3200" />
+		<screen index="0">
+			<bounds x="1071" y="419" width="1860" height="2480" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3707" />
+		</bezel>
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="602" y="103" width="729" height="881" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+
+</mamelayout>
+

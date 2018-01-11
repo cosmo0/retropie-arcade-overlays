@@ -1,0 +1,87 @@
+<!-- Missile Command XBLA / ACC.lay -->	   
+	   
+<mamelayout version="2">
+	<element name="xbla_widescreen">
+		<image file="missilecommand_xbla_ws.png" />
+	</element>
+	<element name="acc">
+		<image file="missile_acc.png" alphafile="missile_acc_mask.png" />
+	</element>
+	<element name="button1" defstate="0">
+		<image file="missile_acc_button_1_off.png"  state="0" />
+		<image file="missile_acc_button_1_on.png"  state="1" />
+	</element>
+	<element name="button2" defstate="0">
+		<image file="missile_acc_button_2_off.png"  state="0" />
+		<image file="missile_acc_button_2_on.png"  state="1" />
+	</element>
+	<element name="button1press" defstate="0">
+		<image file="missile_acc_button_1_press.png"  state="1" />
+	</element>
+	<element name="button2press" defstate="0">
+		<image file="missile_acc_button_2_press.png"  state="1" />
+	</element>
+	<element name="wbezel">
+		<image file="miss169.png" />
+	</element>
+	<element name="wwbezel">
+		<image file="miss1610.png" />
+	</element>
+	<view name="XBLA_Widescreen">
+		<backdrop element="xbla_widescreen">
+			<bounds x="0" y="0" width="1280" height="720" />
+		</backdrop>
+		<screen index="0">
+			<bounds x="210" y="38" width="860" height="645" />
+		</screen> 
+	</view>
+	<view name="Atari_Classics">
+		<backdrop element="acc">
+			<bounds x="0" y="0" width="800" height="600" />
+		</backdrop>
+		<bezel name="led0" element="button1">
+            <bounds x="0" y="550" width="165" height="50" />
+		</bezel>
+		<bezel name="led1" element="button2">
+            <bounds x="635" y="550" width="165" height="50" />
+		</bezel>
+		<bezel element="button1press" inputtag="IN0" inputmask="0x10">
+            <bounds x="0" y="550" width="165" height="50" />
+		</bezel>
+		<bezel element="button2press" inputtag="IN0" inputmask="0x08">
+            <bounds x="635" y="550" width="165" height="50" />
+		</bezel>
+		<screen index="0">
+			<bounds x="140" y="106" width="521" height="390" />
+		</screen> 
+	</view>
+	<view name="Widescreen 16:10 Artwork">
+		<bezel element="wwbezel">
+			<bounds left="0" top="0" right="2560" bottom="1600" />
+		</bezel>
+		<screen index="0">
+			<bounds left="511.03" top="223.27" right="2048.97" bottom="1376.73" />
+		</screen>
+	</view>
+	<view name="Widescreen 16:9 Artwork">
+		<bezel element="wbezel">
+			<bounds left="0" top="0" right="2833" bottom="1600" />
+		</bezel>
+		<screen index="0">
+			<bounds left="614.58" top="130.05" right="2218.42" bottom="1332.93" />
+		</screen>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="400" y="100" width="1120" height="880" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

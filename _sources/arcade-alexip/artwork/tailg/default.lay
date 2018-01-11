@@ -1,0 +1,32 @@
+<!-- tailg.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="tailgunner_bezel.png" />
+	</element>
+	<element name="overlay">
+		<rect>
+			<color red="0.125" green="1.0" blue="1.0" />
+		</rect>
+	</element>	
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="449" y="1216" width="2600" height="1950" />
+		</screen>
+		<overlay element="overlay">
+			<bounds x="448" y="1215" width="2602" height="1952" />
+		</overlay>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="3508" height="4000" />
+		</bezel>
+	</view>
+</mamelayout>
+
+<!--
+
+- Artwork type: Bezel
+- Scanned bezel provided by Timothy from www.outerworldarcade.com
+- Converted for MAME by Ad_Enuff
+- Lay file by Mr. Do
+
+-->

@@ -1,0 +1,37 @@
+<!-- nametune.lay -->
+
+<mamelayout version="2">
+	<element name="sac1">
+		<image file="bally_sente_bezel_sac1.png" />
+	</element>
+	<element name="sac1_deluxe">
+		<image file="bally_sente_bezel_sac1_deluxe.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<bounds x="0" y="1060" width="3245" height="2900" />
+		<screen index="0">
+			<bounds x="323" y="1436" width="2600" height="1956" />
+		</screen>
+		<bezel element="sac1">
+			<bounds x="0" y="0" width="3245" height="4000" />
+		</bezel>
+	</view>
+	<view name="Deluxe_Upright_Artwork">
+		<screen index="0">
+			<bounds x="320" y="1422" width="2620" height="1965" />
+		</screen>
+		<bezel element="sac1_deluxe">
+			<bounds x="0" y="0" width="3262" height="4000" />
+		</bezel>
+	</view>
+</mamelayout>
+
+<!--
+
+- Artwork type: Bezel
+- Scanned bezels provided by Aaron Giles
+- On loan from Tim at www.arcadecollecting.com
+- Vectorized by zorg; color corrected by Ad_Enuff
+- Lay file by Mr. Do
+
+-->

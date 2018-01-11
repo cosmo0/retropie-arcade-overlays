@@ -1,0 +1,40 @@
+<!-- shangon.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="shangon.png" />
+	</element>
+	<element name="bezel2">
+		<image file="shangon_sitdown.png" />
+	</element>	
+	<view name="Cockpit_Artwork">
+		<bezel element="bezel2">
+			<bounds x="0" y="0" width="1980" height="1434" />
+		</bezel>
+		<screen index="0">
+			<bounds x="474" y="360.5" width="1030" height="772.5" />
+		</screen>
+	</view>	
+	<view name="Upright_Artwork">
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="3000" height="2250" />
+		</bezel>
+		<screen index="0">
+			<bounds x="710" y="737.5" width="1580" height="1185" />
+		</screen>
+
+</view><element name="bezel3">
+		<image file="shangon_cropped.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="362" y="78" width="1210" height="918" />
+		</screen>
+		<bezel element="bezel3">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

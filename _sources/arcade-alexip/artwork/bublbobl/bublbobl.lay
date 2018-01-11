@@ -1,0 +1,95 @@
+<!-- bublbobl.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="bubbob_bezel.png" />
+	</element>
+
+	<element name="inst_vert">
+		<image file="bublbobl_inst_vert.png" />
+	</element>
+
+	<element name="inst_horiz">
+		<image file="bublbobl_inst_horiz.png" />
+	</element>
+
+	<element name="inst_horiz2">
+		<image file="bublbobl_inst_horiz_2.png" />
+	</element>
+	<view name="Inst_Card_JPN">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="inst_horiz">
+			<bounds x="0" y="3050" width="4000" height="738" />
+		</bezel>
+	</view>
+	<view name="Inst_Card_US">
+		<bounds x="-1544.5" y="0" width="9089" height="5441" />
+		<screen index="0">
+			<bounds x="0" y="0" width="6000" height="4500" />
+		</screen>
+		<backdrop element="inst_horiz2">
+			<bounds x="1000" y="4600" width="4000" height="841" />
+		</backdrop>
+		<bezel element="inst_vert">
+			<bounds x="6100" y="1500" width="1444.5" height="2000" />
+		</bezel>
+	</view>
+	<view name="Bezel_Homebrew">
+		<screen index="0">
+			<bounds x="905" y="707" width="2160" height="1620" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3144" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="322" y="37" width="1277" height="1006" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="Artwork2">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="400" y="100" width="1120" height="880" />
+		</screen>
+		<bezel element="Artwork2">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="Artwork3">
+		<image file="art3.png" />
+	</element>
+	<view name="Artwork3">
+		<screen index="0">
+			<bounds x="315" y="64" width="1280" height="950" />
+		</screen>
+		<bezel element="Artwork3">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view><element name="Cabinet">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="362" y="103" width="1202" height="884" />
+		</screen>
+		<bezel element="Cabinet">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

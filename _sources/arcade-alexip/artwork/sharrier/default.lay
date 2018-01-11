@@ -1,0 +1,42 @@
+<!-- sharrier.lay -->
+
+<mamelayout version="2">
+	<element name="inst">
+		<image file="space_harrier_inst.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</screen>
+		<bezel element="inst">
+			<bounds x="743" y="3050" width="2514" height="829" />
+		</bezel>
+
+</view><element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="386" y="85" width="1146" height="909" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art2.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="508" y="243" width="921" height="693" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+
+
+	</view>
+</mamelayout>
+

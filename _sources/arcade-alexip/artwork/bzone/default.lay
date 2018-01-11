@@ -1,0 +1,60 @@
+<!-- bzone.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA1">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="390" y="57" width="1784" height="1322" />
+		</screen>
+		<bezel element="bezelA1">
+			<bounds x="0" y="0" width="2560" height="1440" />
+		</bezel>
+	</view>
+	<element name="backdrop">
+		<image file="battlezone_backdrop.png" />
+	</element>
+	<element name="cabaret">
+		<image file="battlezone_cabaret_2.png" />
+	</element>
+	<element name="overlay">
+		<rect>
+			<bounds left="0" top="0" right="1068" bottom="160" />
+			<color red="1.0" green="0.125" blue="0.125" />
+		</rect>
+		<rect>
+			<bounds left="0" top="160" right="1068" bottom="801" />
+			<color red="0.125" green="1.0" blue="0.125" />
+		</rect>
+	</element>
+	<view name="Upright_Artwork">
+		<backdrop element="backdrop">
+			<bounds x="0" y="0" width="1647" height="955" />
+			<color alpha=".8" />
+		</backdrop>		
+		<overlay element="overlay">
+			<bounds x="286" y="124" width="1068" height="801" />
+		</overlay>
+		<screen index="0">
+           	<bounds x="286" y="124" width="1068" height="801" />
+		</screen>		
+	</view>
+	<view name="Cabaret_Artwork">
+		<overlay element="overlay">
+			<bounds x="283" y="280" width="1068" height="801" />
+		</overlay>
+		<bezel element="overlay">
+			<bounds x="283" y="280" width="1068" height="801" />
+			<color alpha="0.1" />
+		</bezel>
+		<bezel element="cabaret">
+			<bounds x="0" y="0" width="1647" height="1258" />
+		</bezel>		
+		<screen index="0">
+           	<bounds x="283" y="280" width="1068" height="801" />
+		</screen>
+		
+	</view>	
+</mamelayout>
+

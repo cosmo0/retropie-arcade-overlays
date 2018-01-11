@@ -1,0 +1,74 @@
+<!-- kchamp.lay -->
+
+<mamelayout version="2">
+	<element name="bezelA1">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="721" y="57" width="1118" height="1306" />
+		</screen>
+		<bezel element="bezelA1">
+			<bounds x="0" y="0" width="2560" height="1440" />
+		</bezel>
+	</view>
+	<element name="bezelA2">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork 2">
+		<screen index="0">
+			<bounds x="664" y="0" width="1232" height="1440" />
+		</screen>
+		<bezel element="bezelA2">
+			<bounds x="0" y="0" width="2560" height="1440" />
+		</bezel>
+	</view>
+	<element name="bezelK">
+		<image file="art3.png" />
+	</element>
+	<view name="Artwork 3">
+		<screen index="0">
+			<bounds x="532" y="56" width="848" height="948" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+	<element name="bezel">
+		<image file="karate_champ_bezel.png" />
+	</element>
+	<element name="bezel2">
+		<image file="karate_champ_oneplayer.png" />
+	</element>
+	<view name="Upright_Artwork_VS">
+		<bounds x="0" y="0" width="3956" height="3800" />
+		<screen index="0">
+			<bounds x="977" y="506" width="2040" height="2720" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="3956" height="3951" />
+		</bezel>
+	</view>
+	<view name="Upright_Artwork_OnePlayer">
+		<bounds x="0" y="0" width="3956" height="3800" />
+		<screen index="0">
+			<bounds x="977" y="506" width="2040" height="2720" />
+		</screen>
+		<bezel element="bezel2">
+			<bounds x="0" y="0" width="3956" height="3951" />
+		</bezel>
+</view><element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="579" y="37" width="754" height="1032" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

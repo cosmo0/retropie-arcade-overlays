@@ -1,0 +1,15 @@
+<!-- zombraid.lay -->
+
+<mamelayout version="2">
+	<element name="Artwork">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="0">
+			<bounds x="320" y="60" width="1277" height="957" />
+		</screen>
+		<bezel element="Artwork">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+	</view>
+</mamelayout>

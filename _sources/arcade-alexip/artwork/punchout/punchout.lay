@@ -1,0 +1,18 @@
+<!-- punchout.lay -->
+
+<mamelayout version="2">
+
+<element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork">
+		<screen index="1">
+			<bounds x="581" y="4" width="758" height="1070" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+	</view>
+</mamelayout>
+

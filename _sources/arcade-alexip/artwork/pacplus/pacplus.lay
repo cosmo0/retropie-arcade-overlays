@@ -1,0 +1,29 @@
+<!-- pacplus.lay -->
+
+<mamelayout version="2">
+	<element name="bezel_pacman">
+		<image file="pacman_bezel_upright.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="976" y="761" width="2040" height="2720" />
+		</screen>
+		<bezel element="bezel_pacman">
+			<bounds x="0" y="0" width="4000" height="3652" />
+		</bezel>
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="591" y="54" width="758" height="989" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

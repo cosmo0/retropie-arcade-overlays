@@ -1,0 +1,41 @@
+<!-- thndrbld.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="thunderblade_bezel.png" />
+	</element>
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds x="500" y="712" width="3000" height="2250" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3754" />
+		</bezel>
+
+</view><element name="bezelA">
+		<image file="art.png" />
+	</element>
+	<view name="Upright Cabinet">
+		<screen index="0">
+			<bounds x="360" y="92" width="1209" height="908" />
+		</screen>
+		<bezel element="bezelA">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Sitdown Cabinet">
+		<screen index="0">
+			<bounds x="437" y="338" width="835" height="644" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
+

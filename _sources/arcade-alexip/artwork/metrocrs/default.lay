@@ -1,0 +1,43 @@
+<!--Metrocross .lay -->	   
+	   
+<mamelayout version="2">
+
+
+<element name="bezel">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork 1">
+		<screen index="0">
+			<bounds x="520" y="285" width="2970" height="2420" />
+		</screen>
+<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</bezel>
+
+</view><element name="bezelB">
+		<image file="art2.png" />
+	</element>
+	<view name="Artwork 2">
+		<screen index="0">
+			<bounds x="520" y="285" width="2970" height="2420" />
+		</screen>
+<bezel element="bezelB">
+			<bounds x="0" y="0" width="4000" height="3000" />
+		</bezel>
+
+
+</view><element name="bezelC">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="374" y="69" width="1181" height="940" />
+		</screen>
+		<bezel element="bezelC">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+</view>
+
+</mamelayout>

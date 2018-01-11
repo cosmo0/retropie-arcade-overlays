@@ -1,0 +1,41 @@
+<!-- sinistar.lay -->
+
+<mamelayout version="2">
+	<element name="bezel">
+		<image file="sinistar.png" />
+	</element>
+	<view name="Artwork">
+		<bounds x="0" y="0" width="4000" height="3200" />
+		<screen index="0">
+			<bounds x="1025" y="380" width="1950" height="2600" />
+		</screen>
+		<bezel element="bezel">
+			<bounds x="0" y="0" width="4000" height="3321" />
+		</bezel>
+
+</view><element name="bezelK">
+		<image file="art.png" />
+	</element>
+	<view name="Artwork2">
+		<screen index="0">
+			<bounds x="576" y="26" width="766" height="1024" />
+		</screen>
+		<bezel element="bezelK">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+</view>
+<element name="cab">
+		<image file="cab.png" />
+	</element>
+	<view name="Used Cabinet">
+		<screen index="0">
+			<bounds x="602" y="106" width="721" height="885" />
+		</screen>
+		<bezel element="cab">
+			<bounds x="0" y="0" width="1920" height="1080" />
+		</bezel>
+
+
+	</view>
+</mamelayout>
