@@ -1,0 +1,6 @@
+[submodule "_sources/libretro"]
+	path = _sources/libretro
+	url = git@github.com:libretro/arcade-overlays.git
+[submodule "_sources/udb"]
+	path = _sources/udb
+	url = git@github.com:UDb23/rpie-ovl.git
