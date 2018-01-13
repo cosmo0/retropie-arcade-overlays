@@ -6,6 +6,11 @@ This pack adds overlays for arcade games.
 
 **Usage of the pack in a commercial product is strictly forbidden.**
 
+## Credits
+
+Please see [credits](CREDITS.md) to check out the awesome original packs I picked from.  
+I did mostly nothing except move files around and mess with config files.
+
 ## Contents
 
 Compilation of arcade overlays for many games.
@@ -21,8 +26,3 @@ Compilation of arcade overlays for many games.
 - Open the `configs` shared folder on you retropie installation (`\\retropie\configs\` on Windows, `smb://retropie/configs` on Mac)
 - **Recommended:** backup the folder content!
 - Copy the content of the overlays folder into the share, and overwrite the files.
-
-## Credits
-
-Please see [credits](CREDITS.md) to check out the awesome original packs I picked from.  
-I did mostly nothing except move files around and mess with config files.
