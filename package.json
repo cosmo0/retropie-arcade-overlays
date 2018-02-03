@@ -1,0 +1,24 @@
+{
+  "name": "retropie-arcade-overlays",
+  "version": "1.0.0",
+  "description": "Overlays (or bezels) are images added \"above\" the emulator, to mask the black borders around the image.",
+  "main": "import-orionsangel.js",
+  "dependencies": {
+    "sharp": "^0.19.0",
+    "xml2js": "^0.4.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cosmo0/retropie-arcade-overlays.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cosmo0/retropie-arcade-overlays/issues"
+  },
+  "homepage": "https://github.com/cosmo0/retropie-arcade-overlays#readme"
+}
