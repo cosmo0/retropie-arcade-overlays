@@ -26,3 +26,7 @@ Compilation of arcade overlays for many games.
 - Open the `configs` shared folder on you retropie installation (`\\retropie\configs\` on Windows, `smb://retropie/configs` on Mac)
 - **Recommended:** backup the folder content!
 - Copy the content of the overlays folder into the share, and overwrite the files.
+
+## Tools
+
+https://github.com/JamieMason/ImageOptim-CLI
