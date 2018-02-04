@@ -25,16 +25,16 @@ var templateOverlay = fs.readFileSync('import-template-overlay.cfg', { encoding:
 var useFirstBezel = true;
 
 // source folder of the overlays
-var source = "tmp/source/";
-//var source = "_sources/orionsangel/Mame/Artwork/";
+//var source = "tmp/source/";
+var source = "_sources/orionsangel/Mame/Artwork/";
 
 // output for the rom config
-var outputRom = "tmp/output/roms/";
-//var outputRom = "overlays-orionsangel/roms/";
+//var outputRom = "tmp/output/roms/";
+var outputRom = "overlays-orionsangel/roms/";
 
 // output for the overlay
-var outputOvl = "tmp/output/overlay/";
-//var outputOvl = "overlays-orionsangel/configs/all/retroarch/overlay/arcade/";
+//var outputOvl = "tmp/output/overlay/";
+var outputOvl = "overlays-orionsangel/configs/all/retroarch/overlay/arcade/";
 
 /*******************
 * PROCESS SOURCE
@@ -76,9 +76,11 @@ files.forEach(function(file) {
         }
 
         // get bezel file name
-        var bezelFile = layout.mamelayout.element.map(function(element, idx) { 
-            if (element.$.name === view.bezel[0].$.element) {
-                 return element.image[0].$.file;
+        var bezelFile = layout.mamelayout.element.map(function(element, idx) {
+            for (var b = 0; b < view.bezel.length; b++) {
+                if (element.image && element.$.name === view.bezel[b].$.element) {
+                    return element.image[0].$.file;
+                }
             }
         })[0];
         
