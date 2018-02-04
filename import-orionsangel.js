@@ -1,8 +1,10 @@
 var fs = require("fs");
+
 var readlineSync = require("readline-sync");
 var xml2js = require("xml2js");
 var sharp = require("sharp");
 var admzip = require("adm-zip");
+var imagemin = require("imagemin");
 
 /*******************
 * Initialize objects
@@ -12,7 +14,8 @@ var admzip = require("adm-zip");
 var parser = new xml2js.Parser();
 
 // config template
-var template = fs.readFileSync('import-template.cfg');
+var templateGame = fs.readFileSync('import-template.cfg', { encoding: 'utf-8' });
+var templateOverlay = fs.readFileSync('import-template-overlay.cfg', { encoding: 'utf-8' });
 
 /*******************
 * DEFINE PATHS
@@ -39,11 +42,10 @@ var outputOvl = "tmp/output/overlay/";
 
 // get existing artworks
 var files = fs.readdirSync(source);
-for (var f = 0; f < files.length; f++) {
-    var file = files[f];
+files.forEach(function(file) {
     var game = file.replace('.zip', '');
 
-    if (!file.endsWith('.zip')) { continue; }
+    if (!file.endsWith('.zip')) { return; }
 
     console.log("########## PROCESSING " + file + " ##########");
 
@@ -95,16 +97,17 @@ for (var f = 0; f < files.length; f++) {
             }
         })[0];
         
-        console.log('Image: ' + bezelFile);
+        console.log(game + ' image: ' + bezelFile);
 
         // get the screen position
         var screenPos = view.screen[0].bounds[0];
 
         // compute orientation
         var orientation = screenPos.width > screenPos.height ? "h" : "v";
-        console.log('Orientation: ' + orientation);
+        console.log(game + ' orientation: ' + orientation);
 
         // extract the bezel image
+        console.log(game + ' extracting image...');
         var outputImage = outputOvl + '/' + game + '.png';
         if (fs.existsSync(outputImage)) {
             fs.unlinkSync(outputImage);
@@ -113,26 +116,38 @@ for (var f = 0; f < files.length; f++) {
         fs.renameSync(outputOvl + '/' + bezelFile, outputImage);
 
         // process the bezel image
+        console.log(game + ' processing image...');
         var img = sharp(outputImage);
         img.metadata()
         .then(function(meta) {
             // make sure the image is resized in 1080p
             if (meta.width > 1920 || meta.height > 1080) {
+                console.log(game + ' resizing the image...');
                 return img
                     .resize(1920, 1080)
                     .crop(sharp.strategy.center)
                     .toBuffer();
-            } else {
-                return img.toBuffer();
             }
+            
+            console.log(game + ' image is OK');
+            return img.toBuffer();
         }).then(function (buffer) {
-            // save the file
-            fs.writeFileSync(outputImage, buffer);
+            // optimize the file to reduce the size
+            console.log(game + ' optimizing the image...');
+            imagemin.buffer(buffer)
+            .then(function(bufferOptim) {
+                // save the overlay file
+                fs.writeFileSync(outputImage, bufferOptim);
+                console.log(game + ' image optimized');
 
-            // create the libretro cfg file for the rom
+                // create the libretro cfg file for the overlay
+                fs.writeFileSync(outputOvl + '/' + game + '.cfg', templateOverlay.replace('{{game}}', game));
+                console.log(game + ' overlay config written');
 
-            // create the libretro cfg file for the overlay
+                // create the libretro cfg file for the rom
 
+                console.log(game + ' rom config written');
+            });
         });
     });
-}
+});
