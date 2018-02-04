@@ -15,6 +15,9 @@ I did mostly nothing except move files around and mess with config files.
 
 Compilation of arcade overlays for many games.
 
+- [overlays-johnmerit](overlays-johnmerit/) : realistic overlays made by John Merit - 228 games configured
+- [overlays-orionsangel](overlays-orionsangel/) : realistic overlays made by OrionsAngel - 342 games configured
+
 ## Requirements
 
 - A Raspberry Pi 3 - not tested on another hardware, but there's no reason it shouldn't work.
@@ -25,7 +28,7 @@ Compilation of arcade overlays for many games.
 
 - Open the `configs` shared folder on you retropie installation (`\\retropie\configs\` on Windows, `smb://retropie/configs` on Mac)
 - **Recommended:** backup the folder content!
-- Copy the content of the overlays folder into the share, and overwrite the files.
+- Copy the content of the `configs` folder from the chosen overlay into the share, and overwrite the files there.
 - Copy the contents of the `roms` folder alongside your roms.
 
 ## Tools
