@@ -97,6 +97,13 @@ for (var f = 0; f < files.length; f++) {
         
         console.log('Image: ' + bezelFile);
 
+        // get the screen position
+        var screenPos = view.screen[0].bounds[0];
+
+        // compute orientation
+        var orientation = screenPos.width > screenPos.height ? "h" : "v";
+        console.log('Orientation: ' + orientation);
+
         // extract the bezel image
         var outputImage = outputOvl + '/' + game + '.png';
         if (fs.existsSync(outputImage)) {
@@ -105,13 +112,27 @@ for (var f = 0; f < files.length; f++) {
         zip.extractEntryTo(bezelFile, outputOvl, false, true);
         fs.renameSync(outputOvl + '/' + bezelFile, outputImage);
 
-        // make sure the image is resized in 1080p
+        // process the bezel image
+        var img = sharp(outputImage);
+        img.metadata()
+        .then(function(meta) {
+            // make sure the image is resized in 1080p
+            if (meta.width > 1920 || meta.height > 1080) {
+                return img
+                    .resize(1920, 1080)
+                    .crop(sharp.strategy.center)
+                    .toBuffer();
+            } else {
+                return img.toBuffer();
+            }
+        }).then(function (buffer) {
+            // save the file
+            fs.writeFileSync(outputImage, buffer);
 
-        // compute orientation
+            // create the libretro cfg file for the rom
 
-        // create the libretro cfg file for the rom
+            // create the libretro cfg file for the overlay
 
-        // create the libretro cfg file for the overlay
-
+        });
     });
 }
