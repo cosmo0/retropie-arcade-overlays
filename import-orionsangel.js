@@ -14,7 +14,7 @@ var imagemin = require("imagemin");
 var parser = new xml2js.Parser();
 
 // config template
-var templateGame = fs.readFileSync('import-template.cfg', { encoding: 'utf-8' });
+var templateGame = fs.readFileSync('import-template-game.cfg', { encoding: 'utf-8' });
 var templateOverlay = fs.readFileSync('import-template-overlay.cfg', { encoding: 'utf-8' });
 
 /*******************
@@ -52,24 +52,9 @@ files.forEach(function(file) {
     // initialize unzipper for this artwork
     var zip = new admzip(source + '/' + file);
 
-    /*
-    console.log("---------------- ZIP FILES ----------------");
-    var zipEntries = zip.getEntries();
-    zipEntries.forEach(function (zipEntry) {
-        console.log("-- " + zipEntry.name);
-    });
-    */
-
     // parse the layout file
     parser.parseString((zip.readAsText('default.lay')), function (parseErr, layout) {
         if (parseErr) throw parseErr;
-
-        /*
-        console.log("---------------- LAYOUT ----------------");
-        console.log(JSON.stringify(layout));
-        // example:
-        // {"mamelayout":{"$":{"version":"2"},"element":[{"$":{"name":"bezel"},"image":[{"$":{"file":"1942_bezel.png"}}]},{"$":{"name":"bezel_alt1"},"image":[{"$":{"file":"1942_bezel_alt1.png"}}]},{"$":{"name":"bezel_alt2"},"image":[{"$":{"file":"1942_bezel_alt2.png"}}]},{"$":{"name":"screen_bezel"},"image":[{"$":{"file":"vert_screen_bezel.png"}}]},{"$":{"name":"screen_mask"},"image":[{"$":{"file":"vert_screen_mask.png"}}]}],"view":[{"$":{"name":"Cab Artwork"},"screen":[{"$":{"index":"0"},"bounds":[{"$":{"x":"555","y":"0","width":"810","height":"1080"}}]}],"overlay":[{"$":{"element":"screen_mask"},"bounds":[{"$":{"x":"554","y":"0","width":"812","height":"1080"}}]}],"backdrop":[{"$":{"element":"screen_bezel"},"bounds":[{"$":{"x":"518","y":"0","width":"884","height":"1080"}}]}],"bezel":[{"$":{"element":"bezel"},"bounds":[{"$":{"x":"0","y":"0","width":"1920","height":"1080"}}]}]},{"$":{"name":"Cab Artwork (alt1)"},"screen":[{"$":{"index":"0"},"bounds":[{"$":{"x":"555","y":"0","width":"810","height":"1080"}}]}],"overlay":[{"$":{"element":"screen_mask"},"bounds":[{"$":{"x":"554","y":"0","width":"812","height":"1080"}}]}],"backdrop":[{"$":{"element":"screen_bezel"},"bounds":[{"$":{"x":"518","y":"0","width":"884","height":"1080"}}]}],"bezel":[{"$":{"element":"bezel_alt1"},"bounds":[{"$":{"x":"0","y":"0","width":"1920","height":"1080"}}]}]},{"$":{"name":"Unused (alt2)"},"screen":[{"$":{"index":"0"},"bounds":[{"$":{"x":"555","y":"0","width":"810","height":"1080"}}]}],"overlay":[{"$":{"element":"screen_mask"},"bounds":[{"$":{"x":"554","y":"0","width":"812","height":"1080"}}]}],"backdrop":[{"$":{"element":"screen_bezel"},"bounds":[{"$":{"x":"518","y":"0","width":"884","height":"1080"}}]}],"bezel":[{"$":{"element":"bezel_alt2"},"bounds":[{"$":{"x":"0","y":"0","width":"1920","height":"1080"}}]}]}]}}
-        */
 
         var view;
 
@@ -145,7 +130,13 @@ files.forEach(function(file) {
                 console.log(game + ' overlay config written');
 
                 // create the libretro cfg file for the rom
-
+                var gameConfig = templateGame.replace('{{orientation}}', orientation)
+                    .replace('{{game}}', game)
+                    .replace('{{width}}', screenPos.width)
+                    .replace('{{height}}', screenPos.height)
+                    .replace('{{x}}', screenPos.x)
+                    .replace('{{y}}', screenPos.y);
+                fs.writeFileSync(outputRom + '/' + game + '.zip.cfg')
                 console.log(game + ' rom config written');
             });
         });
