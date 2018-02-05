@@ -1,11 +1,11 @@
-var fs = require("fs");
-var path = require("path");
+var fs = require('fs');
+var path = require('path');
 
-var readlineSync = require("readline-sync");
-var xml2js = require("xml2js");
-var sharp = require("sharp");
-var admzip = require("adm-zip");
-var imagemin = require("imagemin");
+var readlineSync = require('readline-sync');
+var xml2js = require('xml2js');
+var sharp = require('sharp');
+var admzip = require('adm-zip');
+var imagemin = require('imagemin');
 
 /*******************
 * Initialize objects
