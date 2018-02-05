@@ -24,21 +24,34 @@ var templateOverlay = fs.readFileSync('import-template-overlay.cfg', { encoding:
 // defaults bezel to first one
 var useFirstBezel = true;
 
+
 // source folder of the overlays
-//var source = "tmp/source/";
 var source = "_sources/orionsangel/Mame/Artwork/";
-
 // output for the rom config
-//var outputRom = "tmp/output/roms/";
 var outputRom = "overlays-orionsangel/roms/";
-
 // output for the overlay
-//var outputOvl = "tmp/output/overlay/";
 var outputOvl = "overlays-orionsangel/configs/all/retroarch/overlay/arcade/";
+
+
+/*
+// source folder of the overlays
+var source = "tmp/source/";
+// output for the rom config
+var outputRom = "tmp/output/roms/";
+// output for the overlay
+var outputOvl = "tmp/output/overlay/";
+*/
 
 /*******************
 * PROCESS SOURCE
 ********************/
+
+// whether to overwrite existing files
+var overwrite = "x";
+while (overwrite.toLowerCase() != "y" && overwrite.toLowerCase() != "n") {
+    overwrite = readlineSync.question('Do you wish to overwrite existing files ? (y/n): ');
+}
+overwrite = (overwrite == "y");
 
 // get existing artworks
 var files = fs.readdirSync(source);
@@ -87,7 +100,7 @@ files.forEach(function(file) {
         console.log(game + ' image: ' + bezelFile);
 
         // get the screen position
-        var screenPos = view.screen[0].bounds[0];
+        var screenPos = view.screen[0].bounds[0].$;
 
         // compute orientation
         var orientation = screenPos.width > screenPos.height ? "h" : "v";
@@ -96,11 +109,14 @@ files.forEach(function(file) {
         // extract the bezel image
         console.log(game + ' extracting image...');
         var outputImage = outputOvl + '/' + game + '.png';
-        if (fs.existsSync(outputImage)) {
+        if (overwrite && fs.existsSync(outputImage)) {
             fs.unlinkSync(outputImage);
         }
-        zip.extractEntryTo(bezelFile, outputOvl, false, true);
-        fs.renameSync(outputOvl + '/' + bezelFile, outputImage);
+
+        if (overwrite || !fs.existsSync(outputImage)) {
+            zip.extractEntryTo(bezelFile, outputOvl, false, true);
+            fs.renameSync(outputOvl + '/' + bezelFile, outputImage);
+        }
 
         // process the bezel image
         console.log(game + ' processing image...');
@@ -124,22 +140,30 @@ files.forEach(function(file) {
             imagemin.buffer(buffer)
             .then(function(bufferOptim) {
                 // save the overlay file
-                fs.writeFileSync(outputImage, bufferOptim);
-                console.log(game + ' image optimized');
+                if (overwrite || !fs.existsSync(outputImage)) {
+                    fs.writeFileSync(outputImage, bufferOptim);
+                    console.log(game + ' image optimized');
+                }
 
                 // create the libretro cfg file for the overlay
-                fs.writeFileSync(outputOvl + '/' + game + '.cfg', templateOverlay.replace('{{game}}', game));
-                console.log(game + ' overlay config written');
+                var outputOvlFile = outputOvl + '/' + game + '.cfg';
+                if (overwrite || !fs.existsSync(outputOvlFile)) {
+                    fs.writeFileSync(outputOvlFile, templateOverlay.replace('{{game}}', game));
+                    console.log(game + ' overlay config written');
+                }
 
                 // create the libretro cfg file for the rom
-                var gameConfig = templateGame.replace('{{orientation}}', orientation)
-                    .replace('{{game}}', game)
-                    .replace('{{width}}', screenPos.width)
-                    .replace('{{height}}', screenPos.height)
-                    .replace('{{x}}', screenPos.x)
-                    .replace('{{y}}', screenPos.y);
-                fs.writeFileSync(outputRom + '/' + game + '.zip.cfg')
-                console.log(game + ' rom config written');
+                var outputRomFile = outputRom + '/' + game + '.zip.cfg';
+                if (overwrite || !fs.existsSync(outputRomFile)) {
+                    var gameConfig = templateGame.replace('{{orientation}}', orientation)
+                        .replace('{{game}}', game)
+                        .replace('{{width}}', screenPos.width)
+                        .replace('{{height}}', screenPos.height)
+                        .replace('{{x}}', screenPos.x)
+                        .replace('{{y}}', screenPos.y);
+                    fs.writeFileSync(outputRomFile, gameConfig);
+                    console.log(game + ' rom config written');
+                }
             });
         });
     });
