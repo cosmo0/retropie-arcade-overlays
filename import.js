@@ -1,4 +1,5 @@
 var fs = require("fs");
+var path = require("path");
 
 var readlineSync = require("readline-sync");
 var xml2js = require("xml2js");
@@ -63,7 +64,7 @@ files.forEach(function(file) {
     console.log("########## PROCESSING " + file + " ##########");
 
     // initialize unzipper for this artwork
-    var zip = new admzip(source + '/' + file);
+    var zip = new admzip(path.join(source, file));
 
     // parse the layout file
     parser.parseString((zip.readAsText('default.lay')), function (parseErr, layout) {
@@ -108,14 +109,14 @@ files.forEach(function(file) {
 
         // extract the bezel image
         console.log(game + ' extracting image...');
-        var outputImage = outputOvl + '/' + game + '.png';
+        var outputImage = path.join(outputOvl, game + '.png');
         if (overwrite && fs.existsSync(outputImage)) {
             fs.unlinkSync(outputImage);
         }
 
         if (overwrite || !fs.existsSync(outputImage)) {
             zip.extractEntryTo(bezelFile, outputOvl, false, true);
-            fs.renameSync(outputOvl + '/' + bezelFile, outputImage);
+            fs.renameSync(path.join(outputOvl, bezelFile), outputImage);
         }
 
         // process the bezel image
@@ -146,14 +147,14 @@ files.forEach(function(file) {
                 }
 
                 // create the libretro cfg file for the overlay
-                var outputOvlFile = outputOvl + '/' + game + '.cfg';
+                var outputOvlFile = path.join(outputOvl, game + '.cfg');
                 if (overwrite || !fs.existsSync(outputOvlFile)) {
                     fs.writeFileSync(outputOvlFile, templateOverlay.replace('{{game}}', game));
                     console.log(game + ' overlay config written');
                 }
 
                 // create the libretro cfg file for the rom
-                var outputRomFile = outputRom + '/' + game + '.zip.cfg';
+                var outputRomFile = path.join(outputRom, game + '.zip.cfg');
                 if (overwrite || !fs.existsSync(outputRomFile)) {
                     var gameConfig = templateGame.replace('{{orientation}}', orientation)
                         .replace('{{game}}', game)

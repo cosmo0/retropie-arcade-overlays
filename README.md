@@ -17,6 +17,7 @@ Compilation of arcade overlays for many games.
 
 - [overlays-johnmerit](overlays-johnmerit/) : realistic overlays made by John Merit - 228 games configured
 - [overlays-orionsangel](overlays-orionsangel/) : realistic overlays made by OrionsAngel - 342 games configured
+- [overlays-artworks](overlays-artworks/) : artwork overlays compiled by mamehead - 90 games configured
 
 ## Requirements
 

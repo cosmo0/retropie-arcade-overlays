@@ -2,7 +2,7 @@
   "name": "retropie-arcade-overlays",
   "version": "1.0.0",
   "description": "Overlays pack for arcade games in Retropie. This package generates cfg files from existing Mame configs.",
-  "main": "import-orionsangel.js",
+  "main": "import.js",
   "dependencies": {
     "adm-zip": "^0.4.7",
     "imagemin": "^5.3.1",
@@ -13,7 +13,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "optimize": "import-optimize.js"
   },
   "repository": {
     "type": "git",
