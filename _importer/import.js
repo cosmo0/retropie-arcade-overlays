@@ -15,8 +15,8 @@ var imagemin = require("imagemin");
 var parser = new xml2js.Parser();
 
 // config template
-var templateGame = fs.readFileSync('import-template-game.cfg', { encoding: 'utf-8' });
-var templateOverlay = fs.readFileSync('import-template-overlay.cfg', { encoding: 'utf-8' });
+var templateGame = fs.readFileSync('_importer/import-template-game.cfg', { encoding: 'utf-8' });
+var templateOverlay = fs.readFileSync('_importer/import-template-overlay.cfg', { encoding: 'utf-8' });
 
 /*******************
 * DEFINE PATHS

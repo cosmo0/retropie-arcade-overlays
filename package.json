@@ -2,7 +2,7 @@
   "name": "retropie-arcade-overlays",
   "version": "1.0.0",
   "description": "Overlays pack for arcade games in Retropie. This package generates cfg files from existing Mame configs.",
-  "main": "import.js",
+  "main": "_importer/import.js",
   "dependencies": {
     "adm-zip": "^0.4.7",
     "imagemin": "^5.3.1",
@@ -19,7 +19,7 @@
     "url": "git+https://github.com/cosmo0/retropie-arcade-overlays.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL",
   "bugs": {
     "url": "https://github.com/cosmo0/retropie-arcade-overlays/issues"
   },
