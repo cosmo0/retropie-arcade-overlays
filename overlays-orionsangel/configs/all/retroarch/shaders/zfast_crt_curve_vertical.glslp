@@ -1,10 +1,10 @@
 shaders = "1"
 
 textures = "iqLUT;scanLUT"
-iqLUT = "resources/iqlut.png"
+iqLUT = "shaders/zfast_resources/zfast_iqlut.png"
 iqLUT_linear = "false"
 iqLUT_mipmap = "false"
-scanLUT = "resources/scanlut.png"
+scanLUT = "shaders/zfast_resources/zfast_scanlut.png"
 scanLUT_linear = "false"
 scanLUT_mipmap = "false"
 
