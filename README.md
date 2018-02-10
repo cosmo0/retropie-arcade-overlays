@@ -16,7 +16,6 @@ I did mostly nothing except move files around and mess with config files. If you
 Compilation of arcade overlays for many games.
 
 - [overlays-johnmerit](overlays-johnmerit/) : realistic overlays made by John Merit - 228 games configured
-- [overlays-orionsangel](overlays-orionsangel/) : realistic overlays made by Orions Angel - 342 games configured
 - [overlays-realistic](overlays-realistic/) : realistic overlay, mix between John Merit and Orions Angel - 491 games configured
 - [overlays-artworks](overlays-artworks/) : artwork overlays, mix between Mamehead compilation and UDB creations - 90 games configured
 
