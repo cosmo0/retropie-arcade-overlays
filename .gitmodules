@@ -4,3 +4,6 @@
 [submodule "_sources/udb"]
 	path = _sources/udb
 	url = git@github.com:UDb23/rpie-ovl.git
+[submodule "_sources/simbz33"]
+	path = _sources/simbz33
+	url = git@github.com:simbz33/retropie-overlay.git
