@@ -44,7 +44,3 @@ They are configured to use a scanline shader.
 - **Recommended:** backup the folder content!
 - Copy the content of the `configs` folder from the chosen overlay into the share, and overwrite the files there.
 - Copy the contents of the `roms` folder alongside your roms.
-
-## Tools
-
-https://github.com/JamieMason/ImageOptim-CLI
