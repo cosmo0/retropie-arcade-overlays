@@ -11,6 +11,8 @@ This pack adds overlays for arcade games.
 Please see [credits](CREDITS.md) to check out the awesome original packs I picked from.  
 I did mostly nothing except move files around and mess with config files. If you think these overlays are good, please go thank the original authors.
 
+If one of your file is here and you want me to remove it, or want to be credited, please [file an issue](https://github.com/cosmo0/retropie-arcade-overlays/issues).
+
 ## Contents
 
 Compilation of arcade overlays for many games.
@@ -26,7 +28,7 @@ John Merit are still configured to run at 1080p, because they were already confi
 
 ### Artwork overlays
 
-[overlays-artworks](overlays-artworks/) - mix between Mamehead compilation from various authors, and UDB creations.
+[overlays-artworks](overlays-artworks/) - mix between a compilation from various authors by Mamehead, Udb23 and Simbz33 creations.
 
 Artwork or fanart images around the game area, to maximize it, and just cover the black border around with an image. Sometimes it's inspired from the artwork on the real cabinet, sometimes it's completely custom-made.
 

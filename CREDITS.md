@@ -8,7 +8,8 @@ I honestly do not remember where I picked each overlay since I spent a LOT of ti
 - Libretro overlays: [arcade-overlays](https://github.com/libretro/arcade-overlays)
 - Pack by [John Merit](https://forums.libretro.com/t/arcade-overlays/4084/)
 - Packs by [Orionsangel](https://www.youtube.com/orionsangel): [arcade](https://forums.libretro.com/t/my-realistic-arcade-bezels/10604)
-- [Pack by Mamehead](https://drive.google.com/file/d/0Bxhr1yQtWWz4clMycm9kYWVoWU0/view)
+- [Compilation by Mamehead](https://drive.google.com/file/d/0Bxhr1yQtWWz4clMycm9kYWVoWU0/view)
 - [Pack by UDb23](https://github.com/UDb23/rpie-ovl)
+- [Pack by Simbz33](https://github.com/simbz33/retropie-overlay)
 
 Usage of these packs in a commercial product are strictly forbidden.
