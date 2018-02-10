@@ -15,9 +15,22 @@ I did mostly nothing except move files around and mess with config files. If you
 
 Compilation of arcade overlays for many games.
 
-- [overlays-johnmerit](overlays-johnmerit/) : realistic overlays made by John Merit - 228 games configured
-- [overlays-realistic](overlays-realistic/) : realistic overlay, mix between John Merit and Orions Angel - 491 games configured
-- [overlays-artworks](overlays-artworks/) : artwork overlays, mix between Mamehead compilation and UDB creations - 90 games configured
+### Realistic overlays (491 games)
+
+[overlays-realistic](overlays-realistic/) - mix between John Merit's and Orions Angel's work.
+
+Makes your TV look like you're in front of an arcade cabinet. They have screen glare included in the overlay, and are configured to run with a scanline + curvature shader (zfast_crt_curve).
+
+Orions Angel's overlays are configured to run at 720p, because at 1080p, with the shaders, some game are quite slow.  
+John Merit are still configured to run at 1080p, because they were already configured like that when I got them, and I don't want to spend hours changing them.
+
+### Artwork overlays (90 games)
+
+[overlays-artworks](overlays-artworks/) - mix between Mamehead compilation and UDB creations.
+
+Artwork or fanart images around the game area, to maximize it and just cover the black border around with a nice-looking image. Sometimes it's inspired from the artwork on the real cabinet, sometimes it's completely custom-made.
+
+They are configured to use a scanline shader.
 
 ## Requirements
 
