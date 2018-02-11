@@ -17,7 +17,7 @@ If one of your file is here and you want me to remove it, or want to be credited
 
 Compilation of arcade overlays for many games.
 
-### Realistic overlays (491 games)
+### Realistic overlays (500 games)
 
 [overlays-realistic](overlays-realistic/) - mix between John Merit's and Orions Angel's work.
 
@@ -26,7 +26,7 @@ Makes your TV look like you're in front of an arcade cabinet. They have screen g
 Orions Angel's overlays are configured to run at 720p, because at 1080p, with the shaders, some game are quite slow.  
 John Merit are still configured to run at 1080p, because they were already configured like that when I got them, and I don't want to spend hours changing them.
 
-### Artwork overlays
+### Artwork overlays (783 games)
 
 [overlays-artworks](overlays-artworks/) - mix between a compilation from various authors by Mamehead, Udb23 and Simbz33 creations.
 
