@@ -1,3 +1,47 @@
+
+/*
+* MAME ARTWORK PACK IMPORTER
+*
+* Usage:
+* - edit the variables below: source, outputRom, outputOvl to the proper paths
+* - run with "node _importer/import-mame.js"
+* - fix the rom configs/positions manually for each rom file
+*/
+
+/*******************
+* DEFINE PATHS
+********************/
+
+/*
+* A MAME layout file can have several bezels to choose from.
+* This variable defaults the chosen bezel to the first found in the file.
+* Otherwise, you will be prompted for each bezel.
+*/
+var useFirstBezel = true;
+
+/*
+* Source folder of the overlays.
+* This folder should contain the MAME overlays zip files to import.
+*/
+var source = "tmp/oa30/Artwork/";
+
+/*
+* Output folder for the rom config files.
+* These files define the screen position and the overlay config to use,
+* among other things.
+*/
+var outputRom = "overlays-realistic/roms/";
+
+/*
+* Output folder for the overlay config and image.
+*/
+var outputOvl = "overlays-realistic/configs/all/retroarch/overlay/arcade/";
+
+
+/*******************
+* NODEJS IMPORTS
+********************/
+
 var fs = require('fs');
 var path = require('path');
 
@@ -17,31 +61,6 @@ var parser = new xml2js.Parser();
 // config template
 var templateGame = fs.readFileSync('_importer/import-template-game.cfg', { encoding: 'utf-8' });
 var templateOverlay = fs.readFileSync('_importer/import-template-overlay.cfg', { encoding: 'utf-8' });
-
-/*******************
-* DEFINE PATHS
-********************/
-
-// defaults bezel to first one
-var useFirstBezel = true;
-
-
-// source folder of the overlays
-var source = "tmp/oa30/Artwork/";
-// output for the rom config
-var outputRom = "overlays-realistic/roms/";
-// output for the overlay
-var outputOvl = "overlays-realistic/configs/all/retroarch/overlay/arcade/";
-
-
-/*
-// source folder of the overlays
-var source = "tmp/source/";
-// output for the rom config
-var outputRom = "tmp/output/roms/";
-// output for the overlay
-var outputOvl = "tmp/output/overlay/";
-*/
 
 /*******************
 * PROCESS SOURCE
