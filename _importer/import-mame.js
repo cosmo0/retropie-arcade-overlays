@@ -27,11 +27,11 @@ var useFirstBezel = true;
 
 
 // source folder of the overlays
-var source = "_sources/orionsangel/Mame/Artwork/";
+var source = "tmp/oa30/Artwork/";
 // output for the rom config
-var outputRom = "overlays-orionsangel/roms/";
+var outputRom = "overlays-realistic/roms/";
 // output for the overlay
-var outputOvl = "overlays-orionsangel/configs/all/retroarch/overlay/arcade/";
+var outputOvl = "overlays-realistic/configs/all/retroarch/overlay/arcade/";
 
 
 /*
