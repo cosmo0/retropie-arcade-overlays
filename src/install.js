@@ -115,26 +115,30 @@ for (let cfg of availableConfigs) {
         fs.copyFileSync(path.join(pack, 'roms', cfg), path.join(roms, cfg));
     }
 
-    // TODO: read the rom config to get the overlay instead of hard-coding it
+    // read the rom config to get the overlay instead of hard-coding it
+    let romContent = fs.readFileSync(path.join(pack, 'roms', cfg), { encoding: 'utf-8' });
+    let overlayPath = /input_overlay[\s]*=[\s]*(.*\.cfg)/igm.exec(romContent)[1]; // extract overlay path
+    overlayPath = overlayPath.substring(overlayPath.lastIndexOf('/')); // just the file name
+    overlayPath = path.join(pack, 'configs/all/retroarch/overlay/arcade/', overlayPath); // concatenate with pack path
 
-    let overlayPath = path.join(pack, 'configs/all/retroarch/overlay/arcade/');
-    if (fs.existsSync(path.join(overlayPath, overlay))) {
+    if (fs.existsSync(overlayPath)) {
         // copy the overlay config
         if (overwrite || !fs.existsSync(path.join(configs, overlay))) {
             console.log('copy overlay config');
-            fs.copyFileSync(path.join(overlayPath, overlay), path.join(configs, overlay));
+            fs.copyFileSync(overlayPath, path.join(configs, overlay));
         }
 
         // get the overlay image file name
-        var overlayContent = fs.readFileSync(path.join(overlayPath, overlay), { encoding: 'utf-8' });
-        var overlayFile = /overlay0_overlay[\s]*=[\s]*(.*\.png)/igm.exec(overlayContent)[1]
+        let overlayContent = fs.readFileSync(overlayPath, { encoding: 'utf-8' });
+        let overlayFile = /overlay0_overlay[\s]*=[\s]*(.*\.png)/igm.exec(overlayContent)[1]
 
         // copy the overlay image
         if (overwrite || !fs.existsSync(path.join(configs, overlayFile))) {
             console.log('copy overlay image');
-            fs.copyFileSync(path.join(overlayPath, overlayFile), path.join(configs, overlayFile));
+            fs.copyFileSync(overlayPath, path.join(configs, overlayFile));
         }
     } else {
-        console.log('generic overlay');
+        console.error('Overlay config not found: ' + overlayPath);
+        break;
     }
 }
