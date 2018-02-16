@@ -26,7 +26,7 @@ Makes your TV look like you're in front of an arcade cabinet. They have screen g
 Orions Angel's overlays are configured to run at 720p, because at 1080p, with the shaders, some game are quite slow.  
 John Merit are still configured to run at 1080p, because they were already configured like that when I got them, and I don't want to spend hours changing them.
 
-### Artwork overlays (783 games)
+### Artwork overlays (784 games)
 
 [overlays-artworks](overlays-artworks/) - mix between a compilation from various authors by Mamehead, Udb23 and Simbz33 creations.
 

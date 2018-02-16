@@ -11,5 +11,6 @@ I honestly do not remember where I picked each overlay since I spent a LOT of ti
 - [Compilation by Mamehead](https://drive.google.com/file/d/0Bxhr1yQtWWz4clMycm9kYWVoWU0/view)
 - [Pack by UDb23](https://github.com/UDb23/rpie-ovl)
 - [Pack by Simbz33](https://github.com/simbz33/retropie-overlay)
+- [Pack by Derek Moore](https://www.youtube.com/user/oldstarscream)
 
 Usage of these packs in a commercial product are strictly forbidden.
