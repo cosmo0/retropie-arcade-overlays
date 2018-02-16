@@ -28,7 +28,7 @@ John Merit are still configured to run at 1080p, because they were already confi
 
 ### Artwork overlays (784 games)
 
-[overlays-artworks](overlays-artworks/) - mix between a compilation from various authors by Mamehead, Udb23 and Simbz33 creations.
+[overlays-artworks](overlays-artworks/) - mix between Mamehead, Derek Moore, Udb23 and Simbz33 creations and compilations.
 
 Artwork or fanart images around the game area, to maximize it, and just cover the black border around with an image. Sometimes it's inspired from the artwork on the real cabinet, sometimes it's completely custom-made.
 
