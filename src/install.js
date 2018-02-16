@@ -1,17 +1,9 @@
-var fs = require('fs');
-var path = require('path');
-var process = require('process');
+const fs = require('fs-extra');
+const path = require('path');
+const process = require('process');
+const readlineSync = require('readline-sync');
 
-var readlineSync = require('readline-sync');
-
-/*
-    TODO
-    - copy common files :
-        - shaders
-        - _common/h/v.cfg
-        - generic overlays
-    - handle samba shares
-*/
+// TODO: handle SAMBA shares
 
 console.log('=== Overlay pack installer ===');
 
@@ -22,9 +14,17 @@ console.log('=== Overlay pack installer ===');
  * @param {Boolean} checkWrite Whether to try to write into
  */
 var checkAccess = function checkAccess (folder, checkWrite) {
+    try {
+        fs.ensureDirSync(folder);
+    } catch (err) {
+        console.error('The folder %s does not exist or cannot be read, and cannot be created!', folder);
+        console.log('Exiting...');
+        process.exit(1);
+    }
+
     if (fs.existsSync(folder)) {
         if (checkWrite) {
-            var testFile = path.join(folder, '_test-overlay-install.txt');
+            var testFile = path.join(folder, '_test-install.txt');
             try {
                 fs.writeFileSync(testFile, 'test');
                 if (fs.existsSync(testFile)) {
@@ -78,8 +78,8 @@ checkAccess(roms, true);
 console.log('');
 console.log('3) How can I access the retropie shared config folder?')
 console.log('(ex: /Volumes/configs/)')
-var configs = readlineSync.question('Path to the configs: ');
-configs = path.join(configs, 'all/retroarch/overlay/arcade');
+var configsShare = readlineSync.question('Path to the configs: ');
+var configs = path.join(configsShare, 'all/retroarch/overlay/arcade');
 
 checkAccess(configs, true);
 
@@ -139,6 +139,38 @@ for (let cfg of availableConfigs) {
         }
     } else {
         console.error('Overlay config not found: ' + overlayPath);
-        break;
+        process.exit(1);
     }
 }
+
+console.log('All roms configs have been copied');
+
+// copy common config if any
+var commonCfg = path.join(pack, 'configs/all/retroarch/overlay_cfg');
+if (fs.existsSync(commonCfg)) {
+    console.log('');
+    console.log('=== COPYING COMMON CONFIGS ===')
+
+    // check if folder exists on the share
+    let shareCommonCfg = path.join(configsShare, 'all/retroarch/overlay_cfg');
+    fs.ensureDirSync(shareCommonCfg);
+
+    // copy common config files
+    let commonCfgFiles = fs.readdirSync(commonCfg);
+    for (let cfg of commonCfgFiles) {
+        if (overwrite || !fs.existsSync(path.join(shareCommonCfg, cfg))) {
+            console.log('Copy ' + cfg);
+            fs.copyFileSync(path.join(commonCfg, cfg), path.join(shareCommonCfg, cfg));
+        }
+    }
+
+    console.log('Common configs have been copied');
+}
+
+// copy shaders
+console.log('');
+console.log('=== COPYING SHADERS ===');
+var shaders = path.join(pack, 'configs/all/retroarch/shaders');
+var shareShaders = path.join(configsShare, 'all/retroarch/shaders');
+fs.copySync(shaders, shareShaders, { overwrite: overwrite });
+console.log('Shaders have been copied');

@@ -5,6 +5,7 @@
   "main": "src/import.js",
   "dependencies": {
     "adm-zip": "^0.4.7",
+    "fs-extra": "^5.0.0",
     "imagemin": "^5.3.1",
     "imageoptim-cli": "^1.15.4",
     "readline-sync": "^1.4.7",
@@ -12,8 +13,7 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {},
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cosmo0/retropie-arcade-overlays.git"
