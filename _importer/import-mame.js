@@ -23,19 +23,19 @@ var useFirstBezel = true;
 * Source folder of the overlays.
 * This folder should contain the MAME overlays zip files to import.
 */
-var source = "tmp/oa30/Artwork/";
+var source = "tmp/source/";
 
 /*
 * Output folder for the rom config files.
 * These files define the screen position and the overlay config to use,
 * among other things.
 */
-var outputRom = "overlays-realistic/roms/";
+var outputRom = "tmp/output/roms/";
 
 /*
 * Output folder for the overlay config and image.
 */
-var outputOvl = "overlays-realistic/configs/all/retroarch/overlay/arcade/";
+var outputOvl = "tmp/output/overlay";
 
 
 /*******************
