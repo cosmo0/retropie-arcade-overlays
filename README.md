@@ -17,9 +17,9 @@ If one of your file is here and you want me to remove it, or want to be credited
 
 Compilation of arcade overlays for many games.
 
-### Realistic overlays (509 games)
+### Realistic overlays (510 games)
 
-[overlays-realistic](overlays-realistic/) - mix between John Merit's and Orions Angel's work.
+[overlays-realistic](overlays-realistic/) - mix between John Merit's, Orions Angel's and Derek Moore work.
 
 Makes your TV look like you're in front of an arcade cabinet. They have screen glare included in the overlay, and are configured to run with a scanline + curvature shader (zfast_crt_curve).
 
