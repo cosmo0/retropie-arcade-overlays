@@ -44,3 +44,14 @@ Artwork or fanart images around the game area, to maximize it, and just cover th
 - **Recommended:** backup the folder content!
 - Copy the content of the `configs` folder from the chosen overlay into the share, and overwrite the files there.
 - Copy the contents of the `roms` folder alongside your roms.
+
+## Installation - advanced users
+
+An install script (cross-platform, written in NodeJS) is available. It can install only the overlays you need, and copy the roms you're missing from your romset.
+
+The following steps assume you already know how to use a shell and Git. Otherwise, use the copy/paste method.
+
+- Install [NodeJS](http://nodejs.org)
+- Git clone the repository
+- Run `npm install`
+- Run `node .` and follow the instructions
