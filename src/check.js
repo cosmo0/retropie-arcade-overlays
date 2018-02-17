@@ -11,6 +11,8 @@ let templateOverlay = fs.readFileSync('src/import-template-overlay.cfg', { encod
 // check all packs
 let packs = fs.readdirSync('.').filter(dir => dir.startsWith('overlays-'));
 for (let pack of packs) {
+    console.log('');
+    console.log('');
     console.log('========== PACK %s ==========', pack);
 
     let templateRom = fs.readFileSync('src/import-template-game-' + pack.replace('overlays-', '') + '.cfg', { encoding: 'utf-8' });
@@ -47,7 +49,7 @@ for (let pack of packs) {
     for (let overlayFile of overlaysFiles) {
         // get image file name
         let overlayContent = fs.readFileSync(path.join(overlaysFolder, overlayFile), { encoding: 'utf-8' });
-        let overlayImage = /overlay0_overlay[\s]*=[\s]*(.*\.png)/igm.exec(overlayContent)[1]
+        let overlayImage = /overlay0_overlay[\s]*=[\s]*"?(.*\.png)"?/igm.exec(overlayContent)[1]
 
         // check that the image exists
         if (!fs.existsSync(path.join(overlaysFolder, overlayImage))) {
@@ -58,26 +60,13 @@ for (let pack of packs) {
         // check that a rom config uses this overlay
         if (!usedOverlays.indexOf(overlayFile)) {
             console.log('> Overlay %s is not used by any rom config');
-            readlineSync.keyInPause();
+            if (readlineSync.keyInYNStrict('Do you wish to create it?')) {
+                fs.writeFileSync(
+                    path.join(romsFolder, overlayFile.replace('.cfg', '.zip.cfg')),
+                    templateRom.replace('{{game}}', overlayFile.replace('.cfg', '')));
+            }
         }
     }
 
     console.log('%i overlays processed', overlaysFiles.length);
 }
-
-/*
-// for each overlay, create a rom config if it doesn't exist yet
-fs.readdir(overlaysFolder, function(err, files) {
-    for (let file of files) {
-        var game = file.replace('.cfg', '');
-        var romcfg = path.join(romsFolder, game + '.zip.cfg');
-
-        if (!fs.existsSync(romcfg)) {
-            console.log('> CREATE');
-            fs.writeFileSync(romcfg, template.replace('{{game}}', game));
-        } else {
-            console.log('OK');
-        }
-    }
-});
-*/
