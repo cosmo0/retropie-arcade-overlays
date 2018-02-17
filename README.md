@@ -17,18 +17,18 @@ If one of your file is here and you want me to remove it, or want to be credited
 
 Compilation of arcade overlays for many games.
 
-### Realistic overlays (510 games)
+### [Realistic overlays](overlays-realistic/) (510 games)
 
-[overlays-realistic](overlays-realistic/) - mix between John Merit's, Orions Angel's and Derek Moore work.
+Mix between [John Merit](https://forums.libretro.com/t/arcade-overlays/4084/), [OrionsAngel](https://www.youtube.com/orionsangel) and [Derek Moore](https://www.youtube.com/user/oldstarscream) works.
 
 Makes your TV look like you're in front of an arcade cabinet. They have screen glare included in the overlay, and are configured to run with a scanline + curvature shader (zfast_crt_curve).
 
 Orions Angel's overlays are configured to run at 720p, because at 1080p, with the shaders, some game are quite slow.  
 John Merit are still configured to run at 1080p, because they were already configured like that when I got them, and I don't want to spend hours changing them.
 
-### Artwork overlays (784 games)
+### [Artwork overlays](overlays-artworks/) (784 games)
 
-[overlays-artworks](overlays-artworks/) - mix between Mamehead, Derek Moore, Udb23 and Simbz33 creations and compilations.
+Mix between [Mamehead](https://forums.libretro.com/t/arcade-overlays/4084/284), [Derek Moore](https://www.youtube.com/user/oldstarscream), [UDb23](https://github.com/UDb23/rpie-ovl) and [Simbz33](https://github.com/simbz33/retropie-overlay) creations and compilations.
 
 Artwork or fanart images around the game area, to maximize it, and just cover the black border around with an image. Sometimes it's inspired from the artwork on the real cabinet, sometimes it's completely custom-made.
 
