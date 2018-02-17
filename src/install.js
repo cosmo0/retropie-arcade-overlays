@@ -98,7 +98,7 @@ checkAccess(shareOverlaysFolder, true);
 
 // ask whether to overwrite files if any
 console.log('');
-console.log('4) Do you wish to overwrite existing configs, if any?');
+console.log('4) Do you wish to overwrite existing files?');
 var overwrite = getBoolEntry();
 
 // ask whether to copy the roms if not found
