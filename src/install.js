@@ -127,7 +127,7 @@ for (let cfg of availableConfigs) {
 
     // copy template files
     if (cfg.startsWith('_')) {
-        if (overwrite || !fs.existsSync(ath.join(shareRoms, cfg))) {
+        if (overwrite || !fs.existsSync(path.join(shareRoms, cfg))) {
             console.log('--- Copy template %s', cfg);
             fs.copyFileSync(path.join(packRoms, cfg), path.join(shareRoms, cfg));
         }
