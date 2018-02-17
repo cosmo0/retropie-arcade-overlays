@@ -8,7 +8,7 @@ var overlaysFolder = "overlays-artworks/configs/all/retroarch/overlay/arcade/";
 var romsFolder = "overlays-artworks/roms/";
 
 // rom config template
-var template = fs.readFileSync('_importer/import-template-game-fullscreen.cfg', { encoding: 'utf-8' });
+var template = fs.readFileSync('src/import-template-game-fullscreen.cfg', { encoding: 'utf-8' });
 
 // for each overlay, create a rom config if it doesn't exist yet
 fs.readdir(overlaysFolder, function(err, files) {

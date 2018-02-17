@@ -59,8 +59,8 @@ var imagemin = require('imagemin');
 var parser = new xml2js.Parser();
 
 // config template
-var templateGame = fs.readFileSync('_importer/import-template-game.cfg', { encoding: 'utf-8' });
-var templateOverlay = fs.readFileSync('_importer/import-template-overlay.cfg', { encoding: 'utf-8' });
+var templateGame = fs.readFileSync('src/import-template-game.cfg', { encoding: 'utf-8' });
+var templateOverlay = fs.readFileSync('src/import-template-overlay.cfg', { encoding: 'utf-8' });
 
 /*******************
 * PROCESS SOURCE
@@ -85,8 +85,12 @@ files.forEach(function(file) {
     // initialize unzipper for this artwork
     var zip = new admzip(path.join(source, file));
 
+    // get layout file name
+    var zipEntries = zip.getEntries();
+    var layoutFile = zipEntries.filter(entry => entry.entryName.endsWith('.lay'))[0].entryName;
+
     // parse the layout file
-    parser.parseString((zip.readAsText('default.lay')), function (parseErr, layout) {
+    parser.parseString((zip.readAsText(layoutFile)), function (parseErr, layout) {
         if (parseErr) throw parseErr;
 
         var view;
