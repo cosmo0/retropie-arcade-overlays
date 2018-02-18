@@ -17,6 +17,10 @@ If one of your file is here and you want me to remove it, or want to be credited
 
 Compilation of arcade overlays for many games.
 
+The compilation is "complete", and does not care whether the games works on your raspberry pi, needs special hardware (lightgun...), does not work in MAME2003, etc.
+
+However, if a parent game does not work in MAME2003 but one of its clone does, the config files will exist for both games; that's why there seem to be duplicates.
+
 ### [Realistic overlays](overlays-realistic/) (510 games)
 
 Mix between [John Merit](https://forums.libretro.com/t/arcade-overlays/4084/), [OrionsAngel](https://www.youtube.com/orionsangel) and [Derek Moore](https://www.youtube.com/user/oldstarscream) works.
