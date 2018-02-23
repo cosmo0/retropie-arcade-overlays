@@ -5,6 +5,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const readlineSync = require('readline-sync');
+const sharp = require('sharp');
 
 let templateOverlay = fs.readFileSync('src/import-template-overlay.cfg', { encoding: 'utf-8' });
 
@@ -49,12 +50,30 @@ for (let pack of packs) {
     for (let overlayFile of overlaysFiles) {
         // get image file name
         let overlayContent = fs.readFileSync(path.join(overlaysFolder, overlayFile), { encoding: 'utf-8' });
-        let overlayImage = /overlay0_overlay[\s]*=[\s]*"?(.*\.png)"?/igm.exec(overlayContent)[1]
+        let overlayImage = /overlay0_overlay[\s]*=[\s]*"?(.*\.png)"?/igm.exec(overlayContent)[1];
+        let overlayImageFile = path.join(overlaysFolder, overlayImage);
 
         // check that the image exists
-        if (!fs.existsSync(path.join(overlaysFolder, overlayImage))) {
+        if (!fs.existsSync(overlayImageFile)) {
             console.log('> Image file %s for overlay %s does not exist', overlayImage, overlayFile);
             readlineSync.keyInPause();
+        } else {
+            // resize the overlay if necessary
+            var img = sharp(overlayImageFile);
+            img.metadata()
+            .then(function(meta) {
+                // make sure the image is resized in 1080p
+                if (meta.width > 1920 || meta.height > 1080) {
+                    console.log('> Resizing the image %s to 1080p', overlayImage);
+                    img
+                        .resize(1920, 1080)
+                        .crop(sharp.strategy.center)
+                        .png()
+                        .toFile(overlayImageFile, (err, info) => {
+                            if (err) throw err;
+                        });
+                }
+            });
         }
 
         // check that a rom config uses this overlay
