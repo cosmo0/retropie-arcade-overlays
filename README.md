@@ -36,6 +36,11 @@ Mix between [Mamehead](https://forums.libretro.com/t/arcade-overlays/4084/284), 
 
 Artwork or fanart images around the game area, to maximize it, and just cover the black border around with an image. Sometimes it's inspired from the artwork on the real cabinet, sometimes it's completely custom-made.
 
+No shader is configured ; you can set a system-wide shader by editing the `retroarch.cfg` file at the root of your system config folder.
+
+I have removed the screen bezels (TV-like borders) when present, because I want the overlays to have a coherent look and removing all was the easiest way.  
+Some overlays have a black and white gradient that I find quite disturbing, but removing them would require a bit more work than I'm prepared to do. Feel free to edit them out and make a pull request, if you're so inclined.
+
 ## Requirements
 
 - A Raspberry Pi 3 - not tested on another hardware, but there's no reason it shouldn't work.
