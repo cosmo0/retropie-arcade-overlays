@@ -47,6 +47,7 @@ for (let pack of packs) {
     console.log('===== Checking overlays =====');
 
     let overlaysFiles = fs.readdirSync(overlaysFolder).filter(file => file.endsWith('.cfg') && !file.startsWith('_'));
+    let overlayPromises = [];
     for (let overlayFile of overlaysFiles) {
         // get image file name
         let overlayContent = fs.readFileSync(path.join(overlaysFolder, overlayFile), { encoding: 'utf-8' });
@@ -60,20 +61,7 @@ for (let pack of packs) {
         } else {
             // resize the overlay if necessary
             var img = sharp(overlayImageFile);
-            img.metadata()
-            .then(function(meta) {
-                // make sure the image is resized in 1080p
-                if (meta.width > 1920 || meta.height > 1080) {
-                    console.log('> Resizing the image %s to 1080p', overlayImage);
-                    img
-                        .resize(1920, 1080)
-                        .crop(sharp.strategy.center)
-                        .png()
-                        .toFile(overlayImageFile, (err, info) => {
-                            if (err) throw err;
-                        });
-                }
-            });
+            overlayPromises.push({ promise: img.metadata(), img, file: overlayImageFile });
         }
 
         // check that a rom config uses this overlay
@@ -88,4 +76,27 @@ for (let pack of packs) {
     }
 
     console.log('%i overlays processed', overlaysFiles.length);
+
+    if (overlayPromises.length > 0) {
+        console.log('');
+        console.log('===== Resize overlays =====');
+
+        overlayPromises.forEach(p => {
+            p.promise.then(meta => {
+                // make sure the image is resized in 1080p
+                if (meta.width > 1920 || meta.height > 1080) {
+                    console.log('> Must resize the image %s to 1080p', p.file);
+                    return p.img
+                        .resize(1920, 1080)
+                        .crop(sharp.strategy.center)
+                        .toBuffer();
+                }
+            }).then(buffer => {
+                if (buffer && buffer != null) {
+                    fs.writeFileSync(p.file, buffer);
+                    console.log('> Resize OK - %s', p.file);
+                }
+            });
+        });
+    }
 }
