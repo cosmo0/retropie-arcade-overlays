@@ -59,7 +59,7 @@ var imagemin = require('imagemin');
 var parser = new xml2js.Parser();
 
 // config template
-var templateGame = fs.readFileSync('src/import-template-realistic.cfg', { encoding: 'utf-8' });
+var templateGame = fs.readFileSync('src/import-template-game-realistic.cfg', { encoding: 'utf-8' });
 var templateOverlay = fs.readFileSync('src/import-template-overlay.cfg', { encoding: 'utf-8' });
 
 /*******************
