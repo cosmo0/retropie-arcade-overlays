@@ -127,7 +127,7 @@ files.forEach(function(file) {
         var screenPos = view.screen[0].bounds[0].$;
 
         // compute orientation
-        var orientation = screenPos.width > screenPos.height ? "h" : "v";
+        var orientation = parseInt(screenPos.width) > parseInt(screenPos.height) ? "h" : "v";
         console.log(game + ' orientation: ' + orientation);
 
         // extract the bezel image
