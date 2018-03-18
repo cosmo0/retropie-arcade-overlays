@@ -28,10 +28,10 @@ for (let i = 0; i < files.length; i++) {
         let y = parseInt(/custom_viewport_y[\s]*=[\s]*"([\d]+)"/igm.exec(conf)[1]);
 
         // resize to 1080p
-        width = width * ratio;
-        height = height * ratio;
-        x = x * ratio;
-        y = y * ratio;
+        width = Math.round(width * ratio);
+        height = Math.round(height * ratio);
+        x = Math.round(x * ratio);
+        y = Math.round(y * ratio);
 
         conf = conf.replace(/custom_viewport_width[\s]*=[\s]*"([\d]+)"/img, 'custom_viewport_width = "' + width + '"');
         conf = conf.replace(/custom_viewport_height[\s]*=[\s]*"([\d]+)"/img, 'custom_viewport_height = "' + height + '"');
