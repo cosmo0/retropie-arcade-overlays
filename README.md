@@ -19,16 +19,13 @@ Compilation of arcade overlays for many games.
 
 The compilation is "complete", and does not care whether the games works on your raspberry pi, needs special hardware (lightgun...), does not work in MAME2003, etc.
 
-However, if a parent game does not work in MAME2003 but one of its clone does, the config files will exist for both games; that's why there seem to be duplicates.
+However, if a parent game does not work in MAME2003 but one of its clone does, the config files will exist for both games; that's why there seem to be duplicates and clones.
 
 ### [Realistic overlays](overlays-realistic/) (510 games)
 
 Mix between [John Merit](https://forums.libretro.com/t/arcade-overlays/4084/), [OrionsAngel](https://www.youtube.com/orionsangel) and [Derek Moore](https://www.youtube.com/user/oldstarscream) works.
 
-Makes your TV look like you're in front of an arcade cabinet. They have screen glare included in the overlay, and are configured to run with a scanline + curvature shader (zfast_crt_curve).
-
-Orions Angel's overlays are configured to run at 720p, because at 1080p, with the shaders, some game are quite slow.  
-John Merit are still configured to run at 1080p, because they were already configured like that when I got them, and I don't want to spend hours changing them.
+Makes your TV look like you're in front of an arcade cabinet. They have screen glare and scratches included in the overlay, and are configured to run with a scanline + curvature shader (zfast_crt_curve).
 
 ### [Artwork overlays](overlays-artworks/) (780 games)
 
